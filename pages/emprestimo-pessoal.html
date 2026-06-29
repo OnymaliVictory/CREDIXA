@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Empréstimo Pessoal Creditxa — Até €75.000 com aprovação em 24 horas. TAN a partir de 7,99%. 100% online, sem garantias." />
+  <title>Empréstimo Pessoal | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+      padding: 140px 0 80px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(0,191,255,0.2) 0%, transparent 50%),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: auto, 60px 60px, 60px 60px;
+    }
+    .page-hero__content { position: relative; z-index: 1; }
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: start;
+    }
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+    .rate-display {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: var(--radius-md);
+      padding: 28px;
+      color: white;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .rate-big {
+      font-family: var(--font-head);
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .condition-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-mid);
+    }
+    .condition-row:last-child { border-bottom: none; }
+    .condition-row span:last-child { font-weight: 700; color: var(--primary); }
+    .use-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--sky);
+      color: var(--primary);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .use-tag:hover { background: var(--primary); color: white; }
+    @media (max-width: 900px) { .product-detail-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" style="position:relative;background:var(--white);">
+  <div class="header__inner" style="background:var(--white);box-shadow:var(--shadow-sm);">
+    <a href="../index.html" class="logo" style="color:var(--primary);">
+      <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav__link" style="color:var(--text-mid);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Início
+      </a>
+      <a href="../index.html#produtos" class="nav__link" style="color:var(--text-mid);">Produtos</a>
+      <a href="../index.html#como-funciona" class="nav__link" style="color:var(--text-mid);">Como Funciona</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" style="color:var(--primary);">Entrar</a>
+      <a href="../index.html#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <a href="../index.html" class="mobile-menu__link">Início <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <a href="../index.html#produtos" class="mobile-menu__link">Produtos <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <div class="mobile-menu__actions">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Entrar na Conta</a>
+    <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;">Simular Agora</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:8px 16px;border-radius:100px;font-size:0.82rem;font-weight:600;margin-bottom:20px;">
+        💳 Empréstimo Pessoal
+      </div>
+      <h1 style="color:white;margin-bottom:16px;max-width:600px;">Dinheiro na sua conta<br/>em 24 horas.</h1>
+      <p style="font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:520px;margin-bottom:32px;">Para as suas necessidades imediatas — viagens, casa, estudos ou saúde. Sem garantias, sem complicações. Processo 100% digital e seguro.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="../index.html#simulacao" class="btn btn-accent btn--lg">Simular Agora</a>
+        <a href="#detalhes" class="btn btn-ghost btn--lg">Ver Condições</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGHLIGHTS BAR -->
+<div style="background:var(--sky);border-bottom:1px solid var(--border);padding:20px 0;">
+  <div class="container">
+    <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">
+        <span style="font-size:1.3rem;">⚡</span> Aprovação em 24h
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">
+        <span style="font-size:1.3rem;">🔒</span> 100% Seguro
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">
+        <span style="font-size:1.3rem;">💶</span> Até €75.000
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">
+        <span style="font-size:1.3rem;">📱</span> Totalmente Online
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">
+        <span style="font-size:1.3rem;">🎯</span> Sem Comissão de Abertura
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section-pad" id="detalhes">
+  <div class="container">
+    <div class="product-detail-grid">
+
+      <!-- Left Column -->
+      <div>
+        <!-- Benefits -->
+        <div class="reveal">
+          <div class="section-label">Vantagens</div>
+          <h2 class="section-title" style="margin-bottom:32px;">Porquê escolher o Empréstimo Pessoal Creditxa?</h2>
+        </div>
+        <div class="grid-2 reveal" style="margin-bottom:48px;">
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Aprovação Express</div>
+              <p class="security-feature__desc">Decisão em menos de 24 horas. O dinheiro na sua conta no dia seguinte à aprovação.</p>
+            </div>
+          </div>
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Sem Garantias</div>
+              <p class="security-feature__desc">Não é necessário imóvel ou fiador. Apenas comprovativo de rendimentos regulares.</p>
+            </div>
+          </div>
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Taxa Competitiva</div>
+              <p class="security-feature__desc">TAN a partir de 7,99% — uma das mais baixas do mercado português atual.</p>
+            </div>
+          </div>
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Segurança Total</div>
+              <p class="security-feature__desc">Encriptação SSL 256-bit e autenticação de dois fatores para máxima proteção dos seus dados.</p>
+            </div>
+          </div>
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Contrato Digital</div>
+              <p class="security-feature__desc">Assine com Chave Móvel Digital. Sem deslocações, sem impressões.</p>
+            </div>
+          </div>
+          <div class="security-feature">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Apoio Dedicado</div>
+              <p class="security-feature__desc">Gestor pessoal disponível por telefone, email ou chat em horário alargado.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use cases -->
+        <div class="reveal">
+          <h3 style="margin-bottom:20px;">Para que pode usar o seu empréstimo?</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;">
+            <span class="use-tag">✈️ Viagens & Férias</span>
+            <span class="use-tag">🏠 Obras & Remodelação</span>
+            <span class="use-tag">🎓 Educação & Formação</span>
+            <span class="use-tag">💊 Saúde & Bem-Estar</span>
+            <span class="use-tag">💍 Casamentos & Eventos</span>
+            <span class="use-tag">🖥️ Tecnologia & Equipamentos</span>
+            <span class="use-tag">🚀 Negócio Próprio</span>
+            <span class="use-tag">🎁 Qualquer Outro Motivo</span>
+          </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="reveal">
+          <h3 style="margin-bottom:20px;">Documentos Necessários</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:48px;">
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--sky);border-radius:var(--radius-md);">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem;font-weight:700;flex-shrink:0;">✓</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--text-dark);">Cartão de Cidadão ou Passaporte válido</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">Documento de identificação em vigor</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--sky);border-radius:var(--radius-md);">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem;font-weight:700;flex-shrink:0;">✓</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--text-dark);">Últimos 3 recibos de vencimento</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">Ou declaração de IRS / declaração da entidade empregadora</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--sky);border-radius:var(--radius-md);">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem;font-weight:700;flex-shrink:0;">✓</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--text-dark);">Comprovativo de IBAN</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">Extrato ou documento do banco com IBAN visível</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--sky);border-radius:var(--radius-md);">
+              <span style="width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem;font-weight:700;flex-shrink:0;">✓</span>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--text-dark);">Comprovativo de morada</div>
+                <div style="font-size:0.78rem;color:var(--text-light);">Fatura de água, luz ou gás dos últimos 3 meses</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example Table -->
+        <div class="reveal">
+          <h3 style="margin-bottom:20px;">Exemplos Representativos</h3>
+          <div style="overflow-x:auto;border-radius:var(--radius-md);border:1px solid var(--border);">
+            <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+              <thead>
+                <tr style="background:var(--primary);color:white;">
+                  <th style="padding:14px 16px;text-align:left;font-family:var(--font-head);">Montante</th>
+                  <th style="padding:14px 16px;text-align:left;font-family:var(--font-head);">Prazo</th>
+                  <th style="padding:14px 16px;text-align:left;font-family:var(--font-head);">TAN</th>
+                  <th style="padding:14px 16px;text-align:left;font-family:var(--font-head);">Prestação/mês</th>
+                  <th style="padding:14px 16px;text-align:left;font-family:var(--font-head);">Total a Pagar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 16px;font-weight:600;">€5.000</td>
+                  <td style="padding:12px 16px;">24 meses</td>
+                  <td style="padding:12px 16px;color:var(--primary);font-weight:600;">7,99%</td>
+                  <td style="padding:12px 16px;font-weight:700;">€226,38</td>
+                  <td style="padding:12px 16px;">€5.433,12</td>
+                </tr>
+                <tr style="background:var(--sky);border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 16px;font-weight:600;">€10.000</td>
+                  <td style="padding:12px 16px;">36 meses</td>
+                  <td style="padding:12px 16px;color:var(--primary);font-weight:600;">7,99%</td>
+                  <td style="padding:12px 16px;font-weight:700;">€313,36</td>
+                  <td style="padding:12px 16px;">€11.280,96</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:12px 16px;font-weight:600;">€25.000</td>
+                  <td style="padding:12px 16px;">60 meses</td>
+                  <td style="padding:12px 16px;color:var(--primary);font-weight:600;">7,99%</td>
+                  <td style="padding:12px 16px;font-weight:700;">€507,64</td>
+                  <td style="padding:12px 16px;">€30.458,40</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 16px;font-weight:600;">€50.000</td>
+                  <td style="padding:12px 16px;">84 meses</td>
+                  <td style="padding:12px 16px;color:var(--primary);font-weight:600;">7,99%</td>
+                  <td style="padding:12px 16px;font-weight:700;">€773,14</td>
+                  <td style="padding:12px 16px;">€64.943,76</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-light);margin-top:8px;">Valores indicativos. TAEG a partir de 9,2%. Sujeito a aprovação de crédito.</p>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div>
+        <div class="info-card" style="position:sticky;top:100px;">
+          <div class="rate-display">
+            <div style="font-size:0.82rem;opacity:0.8;margin-bottom:6px;">Taxa a Partir de</div>
+            <div class="rate-big">7,99%</div>
+            <div style="font-size:0.82rem;opacity:0.75;margin-top:4px;">TAN anual · TAEG 9,2%</div>
+          </div>
+
+          <div class="condition-row"><span>💶 Montante</span><span>€1.000 – €75.000</span></div>
+          <div class="condition-row"><span>📅 Prazo</span><span>12 – 84 meses</span></div>
+          <div class="condition-row"><span>⚡ Aprovação</span><span>24 horas</span></div>
+          <div class="condition-row"><span>🏦 Comissão Abertura</span><span style="color:#2E7D32;">€0</span></div>
+          <div class="condition-row"><span>📱 Processo</span><span>100% Online</span></div>
+          <div class="condition-row"><span>✍️ Assinatura</span><span>Chave Móvel Digital</span></div>
+
+          <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px;">
+            Pedir Empréstimo Agora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="../index.html#simulacao" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">
+            Simular Primeiro
+          </a>
+          <div style="margin-top:20px;padding:14px;background:var(--sky);border-radius:var(--radius-sm);">
+            <div style="font-size:0.8rem;color:var(--text-mid);text-align:center;line-height:1.6;">
+              🔒 Os seus dados estão protegidos com<br/>encriptação SSL 256-bit
+            </div>
+          </div>
+          <p style="font-size:0.7rem;color:var(--text-light);margin-top:12px;text-align:center;line-height:1.5;">Simulação para fins informativos. Sujeito a aprovação de crédito e análise de risco. Creditxa SA supervisionada pelo Banco de Portugal.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="color:white;margin-bottom:16px;">Pronto para avançar?</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Simulação gratuita, sem compromisso e sem consulta ao Banco de Portugal.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="../index.html#simulacao" class="btn btn-white btn--lg">Simular Gratuitamente</a>
+      <a href="tel:+351210000000" class="btn btn-ghost btn--lg">📞 +351 210 000 000</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--text-dark);color:rgba(255,255,255,0.6);padding:28px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <a href="../index.html" class="logo" style="color:white;font-size:1.2rem;margin-bottom:6px;">
+        <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" style="height:24px;" />
+      </a>
+      <p style="font-size:0.8rem;margin-top:6px;">© 2025 Creditxa S.A. — Supervisionada pelo Banco de Portugal</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:0.82rem;">
+      <a href="privacidade.html" style="color:rgba(255,255,255,0.5);transition:var(--transition);" onmouseover="this.style.color='var(--accent-bright)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacidade</a>
+      <a href="termos.html" style="color:rgba(255,255,255,0.5);transition:var(--transition);" onmouseover="this.style.color='var(--accent-bright)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Termos</a>
+      <a href="../index.html#contacto" style="color:rgba(255,255,255,0.5);transition:var(--transition);" onmouseover="this.style.color='var(--accent-bright)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="toast-icon">ℹ️</span><span class="toast-msg">Mensagem</span></div>
+<button class="scroll-top" aria-label="Voltar ao topo">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<script src="../assets/js/main.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const _sb_url  = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const _sb_key  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  if (!window._supabase) window._supabase = window.supabase.createClient(_sb_url, _sb_key);
+
+</script>
+
+</body>
+</html>

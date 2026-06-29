@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crédito Automóvel Creditxa — Compre o carro dos seus sonhos com taxa a partir de 5,99%. Aprovação imediata online." />
+  <title>Crédito Automóvel | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#001E4A 0%,var(--primary) 55%,var(--primary-light) 100%);padding:140px 0 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,rgba(0,191,255,0.15) 0%,transparent 50%);}
+    .page-hero__content{position:relative;z-index:1;}
+    .detail-grid{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start;}
+    .info-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:32px;box-shadow:var(--shadow-md);}
+    .rate-display{background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:var(--radius-md);padding:28px;color:white;text-align:center;margin-bottom:24px;}
+    .rate-big{font-family:var(--font-head);font-size:3.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;}
+    .cond-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-mid);}
+    .cond-row:last-child{border-bottom:none;}
+    .cond-row span:last-child{font-weight:700;color:var(--primary);}
+    .car-option{padding:20px;border:1px solid var(--border);border-radius:var(--radius-md);transition:var(--transition);cursor:pointer;}
+    .car-option:hover{border-color:var(--accent);box-shadow:var(--shadow-sm);transform:translateY(-3px);}
+    @media(max-width:900px){.detail-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<header class="header" style="position:relative;background:var(--white);">
+  <div class="header__inner" style="background:var(--white);box-shadow:var(--shadow-sm);">
+    <a href="../index.html" class="logo" style="color:var(--primary);">
+      <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav__link" style="color:var(--text-mid);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg> Início</a>
+      <a href="../index.html#produtos" class="nav__link" style="color:var(--text-mid);">Produtos</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" style="color:var(--primary);">Entrar</a>
+      <a href="../index.html#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span class="hamburger__bar" style="background:var(--primary);"></span><span class="hamburger__bar" style="background:var(--primary);"></span><span class="hamburger__bar" style="background:var(--primary);"></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../index.html" class="mobile-menu__link">Início <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <div class="mobile-menu__actions">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Entrar</a>
+    <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;">Simular Agora</a>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:8px 16px;border-radius:100px;font-size:0.82rem;font-weight:600;margin-bottom:20px;">🚗 Crédito Automóvel</div>
+      <h1 style="color:white;margin-bottom:16px;max-width:580px;">O carro dos seus sonhos. Aprovação imediata.</h1>
+      <p style="font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:500px;margin-bottom:32px;">Financiamento para veículos novos e usados com as melhores taxas do mercado. Resposta online em minutos.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="../index.html#simulacao" class="btn btn-accent btn--lg">Simular Crédito Auto</a>
+        <a href="#opcoes" class="btn btn-ghost btn--lg">Ver Opções</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--sky);border-bottom:1px solid var(--border);padding:20px 0;">
+  <div class="container">
+    <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">⚡ Decisão Imediata Online</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">📉 TAN a partir de 5,99%</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">💶 Até €80.000</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">🚙 Novos e Usados</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">📅 Até 84 meses</div>
+    </div>
+  </div>
+</div>
+
+<section class="section-pad" id="opcoes">
+  <div class="container">
+    <div class="detail-grid">
+      <div>
+        <div class="reveal">
+          <div class="section-label">Modalidades</div>
+          <h2 class="section-title" style="margin-bottom:32px;">Escolha a opção certa para si</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:48px;" class="reveal">
+          <div class="car-option">
+            <div style="font-size:2rem;margin-bottom:12px;">🚘</div>
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;font-size:1.05rem;">Veículo Novo</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:4px;">5,99% TAN</div>
+            <p style="font-size:0.82rem;color:var(--text-light);">Para veículos saídos da fábrica ou com menos de 12 meses. Financiamento até 100%.</p>
+          </div>
+          <div class="car-option">
+            <div style="font-size:2rem;margin-bottom:12px;">🚗</div>
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;font-size:1.05rem;">Veículo Usado</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:4px;">6,99% TAN</div>
+            <p style="font-size:0.82rem;color:var(--text-light);">Veículos até 10 anos e 150.000 km. Financiamento até 90% do valor de mercado.</p>
+          </div>
+          <div class="car-option">
+            <div style="font-size:2rem;margin-bottom:12px;">⚡</div>
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;font-size:1.05rem;">Elétrico/Híbrido</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:4px;">5,49% TAN</div>
+            <p style="font-size:0.82rem;color:var(--text-light);">Taxa especial para veículos ecológicos. Contribua para um futuro mais verde.</p>
+          </div>
+          <div class="car-option">
+            <div style="font-size:2rem;margin-bottom:12px;">🏎️</div>
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;font-size:1.05rem;">Veículo Premium</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:4px;">6,49% TAN</div>
+            <p style="font-size:0.82rem;color:var(--text-light);">Para veículos de luxo e alta gama. Até €80.000 com condições exclusivas.</p>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-bottom:48px;">
+          <h3 style="margin-bottom:20px;">Vantagens Exclusivas</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+              <div><div class="security-feature__title">Decisão em Minutos</div><p class="security-feature__desc">Sistema de análise automática com resposta quase imediata para a maioria dos pedidos.</p></div>
+            </div>
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+              <div><div class="security-feature__title">Vá ao Stand com Aprovação</div><p class="security-feature__desc">Obtenha a carta de aprovação antes de visitar o stand. Negocie como comprador a pronto.</p></div>
+            </div>
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><div class="security-feature__title">Seguro Auto com Desconto</div><p class="security-feature__desc">Acesso a seguros automóvel em condições preferenciais com os nossos parceiros.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="info-card" style="position:sticky;top:100px;">
+          <div class="rate-display">
+            <div style="font-size:0.82rem;opacity:0.8;margin-bottom:6px;">Taxa a Partir de</div>
+            <div class="rate-big">5,99%</div>
+            <div style="font-size:0.82rem;opacity:0.75;margin-top:4px;">TAN · TAEG a partir de 7,1%</div>
+          </div>
+          <div class="cond-row"><span>💶 Montante</span><span>€5.000 – €80.000</span></div>
+          <div class="cond-row"><span>📅 Prazo</span><span>12 – 84 meses</span></div>
+          <div class="cond-row"><span>⚡ Decisão</span><span>Imediata Online</span></div>
+          <div class="cond-row"><span>🚗 Tipo</span><span>Novos e Usados</span></div>
+          <div class="cond-row"><span>📱 Processo</span><span>100% Digital</span></div>
+          <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px;">
+            Simular Crédito Auto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+351210000000" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">📞 Falar com Consultor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="color:white;margin-bottom:16px;">Pronto para conduzir o seu novo carro?</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Simulação gratuita e decisão em minutos. O seu próximo carro está a um clique.</p>
+    <a href="../index.html#simulacao" class="btn btn-white btn--lg">Simular Gratuitamente</a>
+  </div>
+</section>
+
+<footer style="background:var(--text-dark);color:rgba(255,255,255,0.6);padding:28px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <a href="../index.html" class="logo" style="color:white;font-size:1.2rem;">
+        <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" style="height:24px;" />
+      </a>
+      <p style="font-size:0.8rem;margin-top:6px;">© 2025 Creditxa S.A. — Supervisionada pelo Banco de Portugal</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:0.82rem;">
+      <a href="privacidade.html" style="color:rgba(255,255,255,0.5);">Privacidade</a>
+      <a href="termos.html" style="color:rgba(255,255,255,0.5);">Termos</a>
+      <a href="../index.html#contacto" style="color:rgba(255,255,255,0.5);">Contacto</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast"><span class="toast-icon">ℹ️</span><span class="toast-msg">Mensagem</span></div>
+<button class="scroll-top" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script src="../assets/js/main.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const _sb_url  = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const _sb_key  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  if (!window._supabase) window._supabase = window.supabase.createClient(_sb_url, _sb_key);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crédito Habitação Creditxa — Financiamento até 90%, taxa a partir de 3,49%. Realize o sonho da sua casa com as melhores condições." />
+  <title>Crédito Habitação | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #002A5E 0%, #003F8C 50%, #0056B8 100%);
+      padding: 140px 0 80px;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content:'';position:absolute;inset:0;
+      background: radial-gradient(circle at 75% 30%, rgba(0,191,255,0.18) 0%, transparent 55%),
+                  linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
+                  linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
+      background-size: auto, 60px 60px, 60px 60px;
+    }
+    .page-hero__content { position:relative;z-index:1; }
+    .detail-grid { display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start; }
+    .info-card { background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:32px;box-shadow:var(--shadow-md); }
+    .rate-display { background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:var(--radius-md);padding:28px;color:white;text-align:center;margin-bottom:24px; }
+    .rate-big { font-family:var(--font-head);font-size:3.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1; }
+    .cond-row { display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-mid); }
+    .cond-row:last-child { border-bottom:none; }
+    .cond-row span:last-child { font-weight:700;color:var(--primary); }
+    .step-item { display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--border); }
+    .step-item:last-child { border-bottom:none; }
+    .step-num { width:40px;height:40px;border-radius:12px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.88rem;color:var(--primary);flex-shrink:0; }
+    @media(max-width:900px){.detail-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<header class="header" style="position:relative;background:var(--white);">
+  <div class="header__inner" style="background:var(--white);box-shadow:var(--shadow-sm);">
+    <a href="../index.html" class="logo" style="color:var(--primary);">
+      <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav__link" style="color:var(--text-mid);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg> Início
+      </a>
+      <a href="../index.html#produtos" class="nav__link" style="color:var(--text-mid);">Produtos</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" style="color:var(--primary);">Entrar</a>
+      <a href="../index.html#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../index.html" class="mobile-menu__link">Início <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <a href="../index.html#produtos" class="mobile-menu__link">Produtos <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <div class="mobile-menu__actions">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Entrar</a>
+    <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;">Simular Agora</a>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero__content">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:8px 16px;border-radius:100px;font-size:0.82rem;font-weight:600;margin-bottom:20px;">🏠 Crédito Habitação</div>
+      <h1 style="color:white;margin-bottom:16px;max-width:620px;">A casa dos seus sonhos começa aqui.</h1>
+      <p style="font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:520px;margin-bottom:32px;">Financiamento até 90% do valor do imóvel, com as melhores taxas do mercado e acompanhamento personalizado em todo o processo.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="../index.html#simulacao" class="btn btn-accent btn--lg">Simular Crédito Habitação</a>
+        <a href="#processo" class="btn btn-ghost btn--lg">Ver Processo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--sky);border-bottom:1px solid var(--border);padding:20px 0;">
+  <div class="container">
+    <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">🏦 Financiamento até 90%</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">📉 TAN a partir de 3,49%</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">⏳ Prazo até 30 anos</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">✅ Aprovação em 5 dias úteis</div>
+      <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);">🔁 Taxa Fixa ou Variável</div>
+    </div>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="detail-grid">
+      <div>
+        <div class="reveal">
+          <div class="section-label">Vantagens</div>
+          <h2 class="section-title" style="margin-bottom:32px;">O crédito habitação mais completo de Portugal</h2>
+        </div>
+
+        <!-- Rate Options -->
+        <div class="reveal" style="margin-bottom:48px;">
+          <h3 style="margin-bottom:20px;">Escolha a sua taxa</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="padding:24px;border:2px solid var(--accent);border-radius:var(--radius-md);background:rgba(0,147,232,0.04);position:relative;">
+              <div style="position:absolute;top:-10px;left:20px;background:var(--accent);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:100px;">RECOMENDADO</div>
+              <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;">Taxa Variável</div>
+              <div style="font-family:var(--font-head);font-size:2rem;font-weight:800;color:var(--primary);">3,49% <span style="font-size:0.9rem;color:var(--text-light);font-weight:400;">TAN</span></div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-top:8px;">Euribor 6M + spread 0,95%</div>
+            </div>
+            <div style="padding:24px;border:1px solid var(--border);border-radius:var(--radius-md);">
+              <div style="font-family:var(--font-head);font-weight:700;margin-bottom:8px;">Taxa Fixa</div>
+              <div style="font-family:var(--font-head);font-size:2rem;font-weight:800;color:var(--primary);">4,10% <span style="font-size:0.9rem;color:var(--text-light);font-weight:400;">TAN</span></div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-top:8px;">Prestação estável por todo o prazo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="reveal" style="margin-bottom:48px;">
+          <h3 style="margin-bottom:20px;">O que está incluído</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <div><div class="security-feature__title">Avaliação do Imóvel</div><p class="security-feature__desc">Avaliação por peritos certificados incluída no processo, sem custo adicional para si.</p></div>
+            </div>
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <div><div class="security-feature__title">Gestor de Conta Dedicado</div><p class="security-feature__desc">Um especialista acompanha-o pessoalmente desde a simulação até à escritura notarial.</p></div>
+            </div>
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+              <div><div class="security-feature__title">Tratamento Documental Completo</div><p class="security-feature__desc">Tratamos de toda a papelada: registo predial, certidões e comunicação com o notário.</p></div>
+            </div>
+            <div class="security-feature">
+              <div class="security-feature__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><div class="security-feature__title">Seguro de Vida Integrado</div><p class="security-feature__desc">Opção de seguro de vida vinculado com condições preferenciais para proteção da sua família.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process -->
+        <div class="reveal" id="processo">
+          <h3 style="margin-bottom:20px;">Processo de Aprovação</h3>
+          <div>
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div><div style="font-weight:700;margin-bottom:4px;font-family:var(--font-head);">Simulação Online</div><p style="font-size:0.88rem;color:var(--text-light);">Simule gratuitamente e receba uma proposta indicativa sem consulta ao Banco de Portugal.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div><div style="font-weight:700;margin-bottom:4px;font-family:var(--font-head);">Envio de Documentação</div><p style="font-size:0.88rem;color:var(--text-light);">Envie os documentos digitalmente pela área de cliente segura. Sem deslocações.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div><div style="font-weight:700;margin-bottom:4px;font-family:var(--font-head);">Aprovação de Crédito</div><p style="font-size:0.88rem;color:var(--text-light);">A nossa equipa analisa o pedido em 5 dias úteis e emite a carta de aprovação.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">04</div>
+              <div><div style="font-weight:700;margin-bottom:4px;font-family:var(--font-head);">Avaliação do Imóvel</div><p style="font-size:0.88rem;color:var(--text-light);">Perito certificado avalia o imóvel para confirmar o valor de financiamento.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">05</div>
+              <div><div style="font-weight:700;margin-bottom:4px;font-family:var(--font-head);">Escritura e Desembolso</div><p style="font-size:0.88rem;color:var(--text-light);">Assinatura da escritura pública e transferência do valor para o vendedor.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="info-card" style="position:sticky;top:100px;">
+          <div class="rate-display">
+            <div style="font-size:0.82rem;opacity:0.8;margin-bottom:6px;">Taxa a Partir de</div>
+            <div class="rate-big">3,49%</div>
+            <div style="font-size:0.82rem;opacity:0.75;margin-top:4px;">TAN anual · TAEG 4,1%</div>
+          </div>
+          <div class="cond-row"><span>🏦 Financiamento</span><span>Até 90% do imóvel</span></div>
+          <div class="cond-row"><span>💶 Montante</span><span>€50.000 – €500.000</span></div>
+          <div class="cond-row"><span>📅 Prazo</span><span>5 – 30 anos</span></div>
+          <div class="cond-row"><span>⚡ Aprovação</span><span>5 dias úteis</span></div>
+          <div class="cond-row"><span>🔁 Taxa</span><span>Fixa ou Variável</span></div>
+          <div class="cond-row"><span>📋 Avaliação</span><span style="color:#2E7D32;">Incluída</span></div>
+          <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:24px;">
+            Simular Crédito Habitação
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+351210000000" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">📞 Falar com Especialista</a>
+          <div style="margin-top:20px;padding:14px;background:var(--sky);border-radius:var(--radius-sm);text-align:center;font-size:0.78rem;color:var(--text-mid);line-height:1.6;">
+            🏆 Eleito Melhor Crédito Habitação 2024<br/>pelo Jornal Económico Portugal
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="color:white;margin-bottom:16px;">A sua casa própria está mais próxima do que pensa.</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Simulação gratuita e sem compromisso. Descubra já a sua prestação mensal.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="../index.html#simulacao" class="btn btn-white btn--lg">Simular Gratuitamente</a>
+      <a href="tel:+351210000000" class="btn btn-ghost btn--lg">📞 +351 210 000 000</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--text-dark);color:rgba(255,255,255,0.6);padding:28px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <a href="../index.html" class="logo" style="color:white;font-size:1.2rem;">
+        <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" style="height:24px;" />
+      </a>
+      <p style="font-size:0.8rem;margin-top:6px;">© 2025 Creditxa S.A. — Supervisionada pelo Banco de Portugal</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:0.82rem;">
+      <a href="privacidade.html" style="color:rgba(255,255,255,0.5);">Privacidade</a>
+      <a href="termos.html" style="color:rgba(255,255,255,0.5);">Termos</a>
+      <a href="../index.html#contacto" style="color:rgba(255,255,255,0.5);">Contacto</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast"><span class="toast-icon">ℹ️</span><span class="toast-msg">Mensagem</span></div>
+<button class="scroll-top" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script src="../assets/js/main.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const _sb_url  = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const _sb_key  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  if (!window._supabase) window._supabase = window.supabase.createClient(_sb_url, _sb_key);
+
+</script>
+
+</body>
+</html>

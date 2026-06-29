@@ -1,0 +1,200 @@
+<!-- ============================================================
+     CREDITXA — Loan Application Modal
+     Collects full KYC data per Banco de Portugal lending rules
+     ============================================================ -->
+<div class="app-modal-overlay" id="appModalOverlay">
+  <div class="app-modal">
+
+    <div class="app-modal__header">
+      <div class="app-modal__top">
+        <div class="app-modal__title" id="appModalTitle">Pedido de Crédito</div>
+        <button class="app-modal__close" id="appModalClose" type="button">✕</button>
+      </div>
+      <div class="app-modal__steps">
+        <div class="app-modal__step-bar active" data-step-bar="1"></div>
+        <div class="app-modal__step-bar" data-step-bar="2"></div>
+        <div class="app-modal__step-bar" data-step-bar="3"></div>
+        <div class="app-modal__step-bar" data-step-bar="4"></div>
+      </div>
+    </div>
+
+    <div class="app-modal__body">
+      <form id="appForm" novalidate>
+
+        <!-- ═══ STEP 1 — Personal Identity ═══ -->
+        <div class="app-form-step active" data-step="1">
+          <div class="app-modal__step-label">Passo 1 de 4</div>
+          <div class="app-modal__step-desc">Dados pessoais e de identificação</div>
+
+          <div class="app-field">
+            <label>Nome Completo <span class="req">*</span></label>
+            <input type="text" name="full_name" placeholder="Ex: Maria Santos Ferreira" required autocomplete="name" />
+            <div class="error-msg">Por favor introduza o seu nome completo.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Data de Nascimento <span class="req">*</span></label>
+              <input type="date" name="date_of_birth" required autocomplete="bday" />
+              <div class="error-msg">Tem de ter pelo menos 18 anos.</div>
+            </div>
+            <div class="app-field">
+              <label>Nacionalidade <span class="req">*</span></label>
+              <input type="text" name="nationality" placeholder="Ex: Portuguesa" required />
+              <div class="error-msg">Campo obrigatório.</div>
+            </div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Telefone <span class="req">*</span></label>
+              <input type="tel" name="phone" placeholder="+351 9XX XXX XXX" required autocomplete="tel" />
+              <div class="error-msg">Introduza um número de telefone válido.</div>
+            </div>
+            <div class="app-field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="o.seu@email.pt" required autocomplete="email" />
+              <div class="error-msg">Introduza um email válido.</div>
+            </div>
+          </div>
+
+          <div class="app-field">
+            <label>NIF — Número de Identificação Fiscal <span class="req">*</span></label>
+            <input type="text" name="nif" placeholder="123456789" maxlength="9" inputmode="numeric" required />
+            <div class="hint">9 dígitos, sem espaços. Obrigatório para qualquer operação de crédito em Portugal.</div>
+            <div class="error-msg">O NIF deve ter exatamente 9 dígitos.</div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 2 — Residency & ID Document ═══ -->
+        <div class="app-form-step" data-step="2">
+          <div class="app-modal__step-label">Passo 2 de 4</div>
+          <div class="app-modal__step-desc">Residência e documento de identificação</div>
+
+          <div class="app-field">
+            <label>Endereço Residencial em Portugal <span class="req">*</span></label>
+            <input type="text" name="address" placeholder="Rua, Número, Localidade, Código Postal" required />
+            <div class="error-msg">Por favor indique o seu endereço completo.</div>
+          </div>
+
+          <div class="app-field">
+            <label>Estatuto de Residência <span class="req">*</span></label>
+            <div class="app-pill-group" data-pill-name="residence_status">
+              <div class="app-pill" data-value="citizen">🇵🇹 Cidadão Português</div>
+              <div class="app-pill" data-value="eu_resident">🇪🇺 Residente UE</div>
+              <div class="app-pill" data-value="non_eu_resident">🌍 Residente Não-UE</div>
+              <div class="app-pill" data-value="non_resident">✈️ Não-Residente</div>
+            </div>
+            <input type="hidden" name="residence_status" required />
+            <div class="error-msg">Por favor selecione o seu estatuto de residência.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Tipo de Documento <span class="req">*</span></label>
+              <select name="id_document_type" required>
+                <option value="">Selecione...</option>
+                <option value="cc">Cartão de Cidadão</option>
+                <option value="passport">Passaporte</option>
+                <option value="residence_permit">Título de Residência</option>
+              </select>
+              <div class="error-msg">Selecione o tipo de documento.</div>
+            </div>
+            <div class="app-field">
+              <label>Número do Documento <span class="req">*</span></label>
+              <input type="text" name="id_document_number" placeholder="Nº do documento" required />
+              <div class="error-msg">Introduza o número do documento.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 3 — Employment, Income & IBAN ═══ -->
+        <div class="app-form-step" data-step="3">
+          <div class="app-modal__step-label">Passo 3 de 4</div>
+          <div class="app-modal__step-desc">Situação profissional e dados bancários</div>
+
+          <div class="app-field">
+            <label>Situação de Emprego <span class="req">*</span></label>
+            <div class="app-pill-group" data-pill-name="employment_status">
+              <div class="app-pill" data-value="employed">Trabalhador por Conta de Outrem</div>
+              <div class="app-pill" data-value="self_employed">Trabalhador Independente</div>
+              <div class="app-pill" data-value="business_owner">Empresário</div>
+              <div class="app-pill" data-value="retired">Aposentado</div>
+              <div class="app-pill" data-value="student">Estudante</div>
+              <div class="app-pill" data-value="unemployed">Desempregado</div>
+            </div>
+            <input type="hidden" name="employment_status" required />
+            <div class="error-msg">Por favor selecione a sua situação de emprego.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Rendimento Mensal Líquido (€) <span class="req">*</span></label>
+              <input type="number" name="monthly_income" placeholder="2000" min="0" step="50" required />
+              <div class="error-msg">Indique o seu rendimento mensal.</div>
+            </div>
+            <div class="app-field">
+              <label>Dívidas Existentes (€) <span class="opt">opcional</span></label>
+              <input type="number" name="existing_debts" placeholder="0" min="0" step="50" />
+              <div class="hint">Soma de prestações mensais de outros créditos</div>
+            </div>
+          </div>
+
+          <div class="app-field">
+            <label>IBAN <span class="req">*</span></label>
+            <input type="text" name="iban" placeholder="PT50 0000 0000 0000 0000 0000 0" required maxlength="34" />
+            <div class="hint">Conta para onde o crédito será transferido, caso aprovado</div>
+            <div class="error-msg">Introduza um IBAN válido (formato português: PT50...).</div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 4 — Loan Details & Review ═══ -->
+        <div class="app-form-step" data-step="4">
+          <div class="app-modal__step-label">Passo 4 de 4</div>
+          <div class="app-modal__step-desc">Detalhes do crédito e confirmação final</div>
+
+          <div class="app-field">
+            <label>Finalidade do Crédito <span class="req">*</span></label>
+            <select name="loan_purpose" required>
+              <option value="">Selecione...</option>
+              <option value="Despesas pessoais">Despesas Pessoais</option>
+              <option value="Educação">Educação</option>
+              <option value="Saúde">Saúde / Despesas Médicas</option>
+              <option value="Viagem">Viagem</option>
+              <option value="Consolidação de dívidas">Consolidação de Dívidas</option>
+              <option value="Compra de viatura">Compra de Viatura</option>
+              <option value="Obras / Habitação">Obras / Habitação</option>
+              <option value="Negócio próprio">Negócio Próprio</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <div class="error-msg">Selecione a finalidade do crédito.</div>
+          </div>
+
+          <div class="app-summary" id="appSummary">
+            <!-- Filled dynamically by JS -->
+          </div>
+
+          <label class="app-consent">
+            <input type="checkbox" name="consent" required />
+            <span>Declaro que as informações fornecidas são verdadeiras e autorizo a Creditxa a consultar o Registo Central de Crédito do Banco de Portugal e a processar os meus dados pessoais nos termos da <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+        </div>
+
+        <!-- ═══ SUCCESS STATE ═══ -->
+        <div class="app-modal__success" data-step="success" style="display:none;">
+          <div class="app-modal__success-icon">✅</div>
+          <h3>Pedido Enviado com Sucesso!</h3>
+          <p>Recebemos o seu pedido de crédito. A nossa equipa vai analisar a sua candidatura e entraremos em contacto dentro de 24 horas.</p>
+          <div class="ref-code" id="appRefCode">#CR-0000</div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="app-modal__footer" id="appModalFooter">
+      <button type="button" class="btn btn-ghost btn--back" id="appBtnBack" style="display:none;">← Voltar</button>
+      <button type="button" class="btn btn-primary" id="appBtnNext">Continuar →</button>
+    </div>
+
+  </div>
+</div>

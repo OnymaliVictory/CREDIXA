@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consolidação de Créditos | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    .page-hero{background:linear-gradient(135deg,#001836,var(--primary),#0066CC);padding:140px 0 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(0,191,255,0.15),transparent 55%);}
+    .page-hero__c{position:relative;z-index:1;}
+    .savings-card{background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:var(--radius-lg);padding:32px;color:white;text-align:center;}
+    .big-saving{font-family:var(--font-head);font-size:3rem;font-weight:800;color:#7DF9FF;letter-spacing:-0.03em;}
+    .credit-before, .credit-after{background:var(--white);border-radius:var(--radius-md);padding:20px;border:1px solid var(--border);}
+    .arrow-down{text-align:center;padding:8px;font-size:1.5rem;color:var(--accent);}
+  </style>
+</head>
+<body>
+<header class="header" style="position:relative;background:var(--white);">
+  <div class="header__inner" style="background:var(--white);box-shadow:var(--shadow-sm);">
+    <a href="../index.html" class="logo" style="color:var(--primary);"><img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" /></a>
+    <nav class="nav">
+      <a href="../index.html" class="nav__link" style="color:var(--text-mid);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg> Início</a>
+      <a href="../index.html#produtos" class="nav__link" style="color:var(--text-mid);">Produtos</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" style="color:var(--primary);">Entrar</a>
+      <a href="../index.html#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span class="hamburger__bar" style="background:var(--primary);"></span><span class="hamburger__bar" style="background:var(--primary);"></span><span class="hamburger__bar" style="background:var(--primary);"></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../index.html" class="mobile-menu__link">Início <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <div class="mobile-menu__actions">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Entrar</a>
+    <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;">Simular Agora</a>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="container"><div class="page-hero__c">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:8px 16px;border-radius:100px;font-size:0.82rem;font-weight:600;margin-bottom:20px;">🔄 Consolidação de Créditos</div>
+    <h1 style="color:white;margin-bottom:16px;max-width:620px;">Junte tudo num só. Pague muito menos.</h1>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:500px;margin-bottom:32px;">Reduza a sua prestação mensal até 60% ao juntar todos os seus créditos num único contrato com uma taxa mais favorável.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="../index.html#simulacao" class="btn btn-accent btn--lg">Calcular Poupança</a>
+      <a href="tel:+351210000000" class="btn btn-ghost btn--lg">📞 Falar com Consultor</a>
+    </div>
+  </div></div>
+</div>
+
+<div style="background:var(--sky);border-bottom:1px solid var(--border);padding:20px 0;">
+  <div class="container">
+    <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="font-size:0.9rem;font-weight:600;color:var(--primary);">💰 Reduza até 60% a prestação</div>
+      <div style="font-size:0.9rem;font-weight:600;color:var(--primary);">📄 Uma única prestação mensal</div>
+      <div style="font-size:0.9rem;font-weight:600;color:var(--primary);">📉 Taxa mais competitiva</div>
+      <div style="font-size:0.9rem;font-weight:600;color:var(--primary);">🧮 Simulação gratuita</div>
+    </div>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start;">
+      <div>
+        <div class="reveal">
+          <div class="section-label">Como Funciona</div>
+          <h2 class="section-title" style="margin-bottom:32px;">Transforme múltiplas dívidas numa única prestação mais baixa</h2>
+        </div>
+
+        <!-- Before/After Visual -->
+        <div class="reveal" style="margin-bottom:48px;">
+          <h3 style="margin-bottom:20px;">Exemplo Real de Poupança</h3>
+          <div class="credit-before">
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:16px;color:var(--text-dark);">❌ Antes da Consolidação</div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div style="display:flex;justify-content:space-between;padding:10px 14px;background:var(--off-white);border-radius:8px;font-size:0.88rem;">
+                <span>Cartão de Crédito</span><span style="font-weight:700;color:#C62828;">€180/mês</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:10px 14px;background:var(--off-white);border-radius:8px;font-size:0.88rem;">
+                <span>Crédito Pessoal (Banco A)</span><span style="font-weight:700;color:#C62828;">€220/mês</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:10px 14px;background:var(--off-white);border-radius:8px;font-size:0.88rem;">
+                <span>Crédito Pessoal (Banco B)</span><span style="font-weight:700;color:#C62828;">€150/mês</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;padding:12px 14px;background:#FFEBEE;border-radius:8px;font-size:0.95rem;border:1px solid #FFCDD2;">
+                <span style="font-weight:700;">Total Mensal</span><span style="font-weight:800;color:#C62828;">€550/mês</span>
+              </div>
+            </div>
+          </div>
+          <div class="arrow-down">⬇️ Após Consolidação Creditxa</div>
+          <div class="credit-after">
+            <div style="font-family:var(--font-head);font-weight:700;margin-bottom:16px;color:var(--text-dark);">✅ Depois da Consolidação</div>
+            <div style="display:flex;justify-content:space-between;padding:14px 18px;background:linear-gradient(135deg,rgba(0,63,140,0.06),rgba(0,147,232,0.06));border-radius:10px;border:2px solid var(--accent);font-size:1rem;">
+              <span style="font-weight:700;">Uma Única Prestação Creditxa</span><span style="font-weight:800;color:var(--primary);">€220/mês</span>
+            </div>
+            <div style="text-align:center;margin-top:16px;padding:14px;background:var(--sky);border-radius:8px;">
+              <div style="font-size:0.82rem;color:var(--text-light);">Poupança mensal</div>
+              <div style="font-family:var(--font-head);font-size:2rem;font-weight:800;color:#2E7D32;">€330/mês</div>
+              <div style="font-size:0.78rem;color:var(--text-light);">60% de redução na prestação</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-bottom:40px;">
+          <h3 style="margin-bottom:20px;">O Processo é Simples</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:36px;height:36px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.85rem;color:var(--primary);flex-shrink:0;">01</div>
+              <div><div style="font-weight:700;margin-bottom:4px;">Lista todos os seus créditos atuais</div><p style="font-size:0.88rem;color:var(--text-light);">Cartões, empréstimos pessoais, descobertos — qualquer tipo de crédito.</p></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:36px;height:36px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.85rem;color:var(--primary);flex-shrink:0;">02</div>
+              <div><div style="font-weight:700;margin-bottom:4px;">Receba uma proposta personalizada</div><p style="font-size:0.88rem;color:var(--text-light);">Os nossos especialistas calculam a melhor solução para o seu caso específico.</p></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:36px;height:36px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.85rem;color:var(--primary);flex-shrink:0;">03</div>
+              <div><div style="font-weight:700;margin-bottom:4px;">Tratamos de tudo</div><p style="font-size:0.88rem;color:var(--text-light);">A Creditxa trata do encerramento dos seus créditos atuais e da transferência de saldos.</p></div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;">
+              <div style="width:36px;height:36px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:0.85rem;color:var(--primary);flex-shrink:0;">04</div>
+              <div><div style="font-weight:700;margin-bottom:4px;">Pague menos todos os meses</div><p style="font-size:0.88rem;color:var(--text-light);">Uma só prestação, uma só data, muito menos dinheiro a sair da sua conta.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div style="background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:32px;box-shadow:var(--shadow-md);position:sticky;top:100px;">
+          <div class="savings-card">
+            <div style="font-size:0.82rem;opacity:0.8;margin-bottom:8px;">Poupança Potencial</div>
+            <div class="big-saving">Até 60%</div>
+            <div style="font-size:0.85rem;opacity:0.75;margin-top:6px;">menos por mês</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0;margin-top:20px;">
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-mid);">
+              <span>Tipos de Crédito Aceites</span><span style="font-weight:700;color:var(--primary);">Todos</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-mid);">
+              <span>Montante Máximo</span><span style="font-weight:700;color:var(--primary);">€100.000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-mid);">
+              <span>Prazo</span><span style="font-weight:700;color:var(--primary);">Até 96 meses</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:0.88rem;color:var(--text-mid);">
+              <span>Simulação</span><span style="font-weight:700;color:#2E7D32;">Gratuita</span>
+            </div>
+          </div>
+          <a href="../index.html#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;">
+            Calcular a Minha Poupança
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+351210000000" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:12px;">📞 Falar com Especialista</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;">
+  <div class="container">
+    <h2 style="color:white;margin-bottom:16px;">Descubra quanto pode poupar hoje.</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Simulação 100% gratuita e sem compromisso. Resultados em minutos.</p>
+    <a href="../index.html#simulacao" class="btn btn-white btn--lg">Calcular Poupança Grátis</a>
+  </div>
+</section>
+
+<footer style="background:var(--text-dark);color:rgba(255,255,255,0.6);padding:28px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <a href="../index.html" class="logo" style="color:white;font-size:1.2rem;"><img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" style="height:24px;" /></a>
+      <p style="font-size:0.8rem;margin-top:6px;">© 2025 Creditxa S.A.</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:0.82rem;">
+      <a href="privacidade.html" style="color:rgba(255,255,255,0.5);">Privacidade</a>
+      <a href="termos.html" style="color:rgba(255,255,255,0.5);">Termos</a>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast"><span class="toast-icon">ℹ️</span><span class="toast-msg">Mensagem</span></div>
+<button class="scroll-top" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script src="../assets/js/main.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const _sb_url  = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const _sb_key  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  if (!window._supabase) window._supabase = window.supabase.createClient(_sb_url, _sb_key);
+
+</script>
+
+</body>
+</html>

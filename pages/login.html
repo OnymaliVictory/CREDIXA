@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar na Conta | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    body { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    body::before { content:''; position:fixed; inset:0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+    .login-card { background: var(--white); border-radius: var(--radius-xl); padding: 48px; max-width: 440px; width: 100%; box-shadow: 0 40px 100px rgba(0,0,0,0.3); position: relative; z-index: 1; animation: fadeInUp 0.6s ease both; }
+    .login-logo { text-align: center; margin-bottom: 36px; }
+    .input-field { width: 100%; padding: 14px 18px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.95rem; color: var(--text-dark); background: var(--off-white); transition: var(--transition); outline: none; margin-bottom: 16px; }
+    .input-field:focus { border-color: var(--accent); background: white; }
+    .input-wrap { position: relative; }
+    .input-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-light); pointer-events: none; }
+    .input-field.has-icon { padding-left: 46px; }
+    .toggle-pass { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-light); font-size: 0.85rem; }
+    .divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .divider span { font-size: 0.8rem; color: var(--text-light); }
+    .social-login { display: flex; gap: 12px; }
+    .social-login-btn { flex: 1; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text-mid); cursor: pointer; transition: var(--transition); background: white; }
+    .social-login-btn:hover { border-color: var(--accent); color: var(--primary); }
+    .checkbox-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+    .checkbox-wrap input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+    .checkbox-wrap label { font-size: 0.85rem; color: var(--text-mid); cursor: pointer; }
+  </style>
+</head>
+<body>
+<div class="login-card">
+  <div class="login-logo">
+    <a href="../index.html" class="logo" style="justify-content:center;font-size:1.8rem;color:var(--primary);">
+      <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+    <p style="font-size:0.88rem;color:var(--text-light);margin-top:8px;">Aceda à sua conta com segurança</p>
+  </div>
+
+  <form id="loginForm" onsubmit="return false;">
+    <label style="font-size:0.82rem;font-weight:700;color:var(--text-mid);display:block;margin-bottom:6px;">Email ou NIF</label>
+    <div class="input-wrap" style="margin-bottom:16px;">
+      <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <input type="text" class="input-field has-icon" placeholder="email@exemplo.pt ou NIF" required />
+    </div>
+
+    <label style="font-size:0.82rem;font-weight:700;color:var(--text-mid);display:block;margin-bottom:6px;">Palavra-passe</label>
+    <div class="input-wrap" style="margin-bottom:8px;">
+      <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <input type="password" class="input-field has-icon" id="passField" placeholder="A sua palavra-passe" required />
+      <span class="toggle-pass" onclick="togglePass()">👁️</span>
+    </div>
+
+    <div style="text-align:right;margin-bottom:16px;">
+      <a href="#" style="font-size:0.82rem;color:var(--accent);font-weight:600;">Esqueci a palavra-passe?</a>
+    </div>
+
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="remember" />
+      <label for="remember">Manter sessão iniciada por 30 dias</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:16px;" onclick="handleLogin(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+      Entrar na Conta
+    </button>
+
+    <div style="margin-top:16px;padding:12px;background:var(--sky);border-radius:var(--radius-sm);display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--text-mid);">
+      🔒 Ligação protegida com SSL 256-bit. Os seus dados estão seguros.
+    </div>
+
+    <div class="divider"><span>ou entre com</span></div>
+
+    <div class="social-login">
+      <button class="social-login-btn">
+        <span style="font-size:1.1rem;">📱</span> Chave Móvel Digital
+      </button>
+      <button class="social-login-btn">
+        <span style="font-size:1.1rem;">🪪</span> Cartão de Cidadão
+      </button>
+    </div>
+  </form>
+
+  <div style="margin-top:28px;text-align:center;padding-top:24px;border-top:1px solid var(--border);">
+    <p style="font-size:0.88rem;color:var(--text-light);">Ainda não tem conta? <a href="../index.html#simulacao" style="color:var(--primary);font-weight:700;">Simule e registe-se</a></p>
+    <a href="../index.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:0.82rem;color:var(--text-light);transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">← Voltar ao início</a>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);">
+      <a href="admin.html" style="display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--text-light);transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-light)'">
+        🔐 Acesso Administrador
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-icon">ℹ️</span><span class="toast-msg">Mensagem</span></div>
+<script src="../assets/js/main.js"></script>
+<script>
+  function togglePass() {
+    const f = document.getElementById('passField');
+    f.type = f.type === 'password' ? 'text' : 'password';
+  }
+  function handleLogin(btn) {
+    btn.innerHTML = '<div class="spinner" style="display:block;border-color:rgba(255,255,255,0.3);border-top-color:white;"></div> A verificar...';
+    btn.disabled = true;
+    setTimeout(() => {
+      window.showToast('✅ Login bem-sucedido! Bem-vindo à Creditxa.');
+      setTimeout(() => { window.location.href = '../index.html'; }, 1500);
+    }, 1800);
+  }
+</script>
+</body>
+</html>

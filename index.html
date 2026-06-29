@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Creditxa — Crédito Rápido, Seguro e Transparente em Portugal. Empréstimos Pessoais, Crédito Habitação e Crédito Automóvel com as melhores taxas." />
+  <meta name="keywords" content="crédito, empréstimo, crédito pessoal, crédito habitação, crédito automóvel, Portugal" />
+  <meta name="author" content="Creditxa" />
+  <meta property="og:title" content="Creditxa — O Crédito que Confia em Si" />
+  <meta property="og:description" content="Empréstimos pessoais, habitação e automóvel com aprovação rápida e total segurança." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#003F8C" />
+  <!-- Security Headers (meta equivalents) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <title>Creditxa — O Crédito que Confia em Si</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/application-modal.css" />
+  <!-- Favicon inline SVG -->
+  <link rel="icon" type="image/png" href="assets/images/favicon-32.png" />
+</head>
+<body>
+
+<!-- =========================================
+     HEADER
+     ========================================= -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo logo--image">
+      <img src="assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav">
+      <div class="nav__item">
+        <a href="#produtos" class="nav__link">
+          Produtos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="pages/emprestimo-pessoal.html" class="dropdown__link">
+            <div class="dropdown__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            Empréstimo Pessoal
+          </a>
+          <a href="pages/credito-habitacao.html" class="dropdown__link">
+            <div class="dropdown__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            </div>
+            Crédito Habitação
+          </a>
+          <a href="pages/credito-automovel.html" class="dropdown__link">
+            <div class="dropdown__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            Crédito Automóvel
+          </a>
+          <a href="pages/consolidacao.html" class="dropdown__link">
+            <div class="dropdown__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            Consolidação de Créditos
+          </a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="#como-funciona" class="nav__link">Como Funciona</a>
+      </div>
+      <div class="nav__item">
+        <a href="#seguranca" class="nav__link">Segurança</a>
+      </div>
+      <div class="nav__item">
+        <a href="pages/guia-credito-portugal.html" class="nav__link">Guia de Crédito</a>
+      </div>
+      <div class="nav__item">
+        <a href="pages/sobre-nos.html" class="nav__link">Sobre Nós</a>
+      </div>
+      <div class="nav__item">
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </div>
+    </nav>
+
+    <!-- Nav Actions -->
+    <div class="nav-actions">
+      <a href="pages/login.html" class="nav-login">Entrar</a>
+      <a href="#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" aria-label="Menu">
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+      <span class="hamburger__bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href="#produtos" class="mobile-menu__link">
+    Produtos
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="#como-funciona" class="mobile-menu__link">
+    Como Funciona
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="#seguranca" class="mobile-menu__link">
+    Segurança
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="pages/guia-credito-portugal.html" class="mobile-menu__link">Guia de Crédito <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+  <a href="pages/sobre-nos.html" class="mobile-menu__link">
+    Sobre Nós
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <a href="#contacto" class="mobile-menu__link">
+    Contacto
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </a>
+  <div class="mobile-menu__actions">
+    <a href="pages/login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Entrar na Conta</a>
+    <a href="#simulacao" class="btn btn-primary" style="width:100%;justify-content:center;">Simular Agora</a>
+  </div>
+</div>
+
+<!-- =========================================
+     HERO
+     ========================================= -->
+<section class="hero" id="inicio">
+  <div class="hero__bg">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+    <div class="hero__grid"></div>
+    <div class="hero__particles" id="particles"></div>
+  </div>
+
+  <div class="hero__container">
+    <!-- Left Content -->
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Aprovação em 24 horas · 100% Digital
+      </div>
+      <h1>O crédito que <em>confia</em> em si — rápido e seguro.</h1>
+      <p class="hero__sub">
+        Na Creditxa, oferecemos soluções de crédito personalizadas com taxas competitivas, processo totalmente online e aprovação expressa. O seu sonho começa aqui.
+      </p>
+      <div class="hero__actions">
+        <a href="#simulacao" class="btn btn-accent btn--lg" id="heroApply">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+          Pedir Crédito Agora
+        </a>
+        <a href="#como-funciona" class="btn btn-ghost btn--lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          Como Funciona
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-num">+50k</div>
+          <div class="hero__stat-label">Clientes Satisfeitos</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">3.49%</div>
+          <div class="hero__stat-label">Taxa a partir de</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">24h</div>
+          <div class="hero__stat-label">Aprovação Express</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Calculator Card -->
+    <div class="hero__card-wrap" id="simulacao">
+      <div class="hero__calc-card">
+        <h3>💰 Simule o Seu Crédito</h3>
+        <div class="calc-tabs">
+          <button class="calc-tab active" data-type="pessoal">Pessoal</button>
+          <button class="calc-tab" data-type="habitacao">Habitação</button>
+          <button class="calc-tab" data-type="automovel">Automóvel</button>
+        </div>
+
+        <!-- Amount Slider -->
+        <div class="form-field">
+          <div class="form-label">
+            Montante <span id="amountVal">€10.000,00</span>
+          </div>
+          <input type="range" class="range-track" id="loanAmount"
+            min="1000" max="75000" value="10000" step="500" />
+          <div class="range-hints"><span>€1.000</span><span>€75.000</span></div>
+        </div>
+
+        <!-- Term Slider -->
+        <div class="form-field">
+          <div class="form-label">
+            Prazo <span id="termVal">36 meses</span>
+          </div>
+          <input type="range" class="range-track" id="loanTerm"
+            min="12" max="84" value="36" step="6" />
+          <div class="range-hints"><span>12 meses</span><span>84 meses</span></div>
+        </div>
+
+        <!-- Result -->
+        <div class="calc-result">
+          <div class="calc-result__label">Prestação Mensal Estimada</div>
+          <div class="calc-result__amount" id="monthlyPayment">—</div>
+          <div class="calc-result__sub">TAN 7,99% · TAEG 9,2% (indicativo)</div>
+          <div class="calc-result-row">
+            <span>Total a Reembolsar</span>
+            <span id="totalPayment">—</span>
+          </div>
+          <div class="calc-result-row">
+            <span>Custo Total do Crédito</span>
+            <span id="totalInterest">—</span>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary" style="width:100%;margin-top:16px;justify-content:center;"
+           data-apply="Pedir Este Crédito" id="applyBtn">
+          Pedir Este Crédito
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+        <p style="font-size:0.72rem;color:var(--text-light);margin-top:10px;text-align:center;">
+          Simulação para fins informativos. Sujeito a aprovação de crédito.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     TRUST STRIP
+     ========================================= -->
+<div class="trust-strip">
+  <div class="trust-strip__inner" id="trustInner">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Banco de Portugal Supervisionado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Encriptação SSL 256-bit
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Aprovação 100% Digital
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Resposta em 24 Horas
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      +50.000 Clientes Satisfeitos
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Avaliação 4.9/5 Estrelas
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Banco de Portugal Supervisionado
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Encriptação SSL 256-bit
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      Aprovação 100% Digital
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Resposta em 24 Horas
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      +50.000 Clientes Satisfeitos
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Avaliação 4.9/5 Estrelas
+    </div>
+  </div>
+</div>
+
+<!-- =========================================
+     PRODUCTS
+     ========================================= -->
+<section class="products section-pad" id="produtos">
+  <div class="container">
+    <div class="products__header reveal">
+      <div class="section-label">Os Nossos Produtos</div>
+      <h2 class="section-title">Soluções de Crédito Para Cada Momento da Sua Vida</h2>
+      <p class="section-sub">Seja para um sonho pessoal, a casa da sua vida ou o carro ideal — a Creditxa tem a solução certa para si.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Personal Loan -->
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        </div>
+        <div class="product-card__title">Empréstimo Pessoal</div>
+        <p class="product-card__desc">Para as suas despesas imediatas, viagens, estudos ou qualquer outro projeto pessoal. Sem precisar de garantias.</p>
+        <div class="product-card__rate">
+          <span class="product-card__rate-num">7,99%</span>
+          <span class="product-card__rate-label">TAN/ano</span>
+        </div>
+        <ul class="product-card__features">
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Até €75.000 disponíveis</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Prazo de 12 a 84 meses</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Transferência em 24 horas</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Sem comissão de abertura</li>
+        </ul>
+        <a href="pages/emprestimo-pessoal.html" class="product-card__link">
+          Saber Mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Home Loan (Featured) -->
+      <div class="product-card product-card--featured reveal reveal-delay-2">
+        <div style="position:absolute;top:16px;right:16px;">
+          <span class="badge" style="background:rgba(0,191,255,0.2);color:rgba(255,255,255,0.9);font-size:0.72rem;">⭐ Mais Popular</span>
+        </div>
+        <div class="product-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="product-card__title">Crédito Habitação</div>
+        <p class="product-card__desc">Realize o sonho da sua casa própria com as melhores condições do mercado e acompanhamento personalizado.</p>
+        <div class="product-card__rate">
+          <span class="product-card__rate-num">3,49%</span>
+          <span class="product-card__rate-label">TAN/ano</span>
+        </div>
+        <ul class="product-card__features">
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Financiamento até 90% do imóvel</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Prazo até 30 anos</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Aprovação em 5 dias úteis</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Taxa fixa ou variável</li>
+        </ul>
+        <a href="pages/credito-habitacao.html" class="product-card__link">
+          Saber Mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Vehicle Loan -->
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="product-card__title">Crédito Automóvel</div>
+        <p class="product-card__desc">Compre o carro dos seus sonhos com condições exclusivas para veículos novos e usados. Processo simples e rápido.</p>
+        <div class="product-card__rate">
+          <span class="product-card__rate-num">5,99%</span>
+          <span class="product-card__rate-label">TAN/ano</span>
+        </div>
+        <ul class="product-card__features">
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Até €80.000 financiados</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Prazo de 12 a 84 meses</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Veículos novos e usados</li>
+          <li class="product-card__feature"><span class="product-card__feature-dot"></span>Decisão imediata online</li>
+        </ul>
+        <a href="pages/credito-automovel.html" class="product-card__link">
+          Saber Mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Extra Product: Consolidation -->
+    <div style="margin-top:24px;">
+      <div class="product-card" style="display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;" class="reveal">
+        <div class="product-card__icon" style="margin-bottom:0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--font-head);font-weight:700;font-size:1.1rem;margin-bottom:6px;">Consolidação de Créditos</div>
+          <p style="font-size:0.88rem;color:var(--text-light);margin:0;">Junte todos os seus créditos num só e reduza a sua prestação mensal até 60%. Simplifique a sua vida financeira com uma única prestação mais baixa.</p>
+        </div>
+        <a href="pages/consolidacao.html" class="btn btn-outline" style="white-space:nowrap;flex-shrink:0;">Ver Solução →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     STATISTICS
+     ========================================= -->
+<section class="stats" id="numeros">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-item__num"><span class="counter" data-target="50" data-suffix="k+">0</span></div>
+        <div class="stat-item__label">Clientes Satisfeitos</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-item__num">€<span class="counter" data-target="850" data-suffix="M+">0</span></div>
+        <div class="stat-item__label">Em Crédito Concedido</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-item__num"><span class="counter" data-target="98" data-suffix="%">0</span></div>
+        <div class="stat-item__label">Taxa de Aprovação</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-4">
+        <div class="stat-item__num"><span class="counter" data-target="4.9" data-suffix="★">0</span></div>
+        <div class="stat-item__label">Avaliação Média</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     HOW IT WORKS
+     ========================================= -->
+<section class="how-it-works section-pad" id="como-funciona">
+  <div class="container">
+    <div class="how-it-works__grid">
+      <!-- Left Content -->
+      <div>
+        <div class="reveal">
+          <div class="section-label">Como Funciona</div>
+          <h2 class="section-title">Crédito aprovado em 4 passos simples</h2>
+          <p class="section-sub">O processo mais simples de Portugal. Tudo online, sem filas, sem burocracia.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal reveal-delay-1">
+            <div class="step__num">01</div>
+            <div>
+              <div class="step__title">Simule e Escolha</div>
+              <p class="step__desc">Use o nosso simulador para calcular a prestação ideal para o seu orçamento. Sem compromisso e sem consulta ao Banco de Portugal.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step__num">02</div>
+            <div>
+              <div class="step__title">Preencha o Formulário</div>
+              <p class="step__desc">Complete o pedido online em menos de 5 minutos com o seu Cartão de Cidadão e NIF. Processo 100% digital e seguro.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step__num">03</div>
+            <div>
+              <div class="step__title">Receba a Decisão</div>
+              <p class="step__desc">A nossa equipa analisa o pedido e envia uma resposta em até 24 horas. Acompanhe o estado em tempo real na sua área pessoal.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-4">
+            <div class="step__num">04</div>
+            <div>
+              <div class="step__title">Assine e Receba</div>
+              <p class="step__desc">Assine o contrato digitalmente com chave móvel digital e receba o dinheiro na sua conta nas 24 horas seguintes à aprovação.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:32px;">
+          <a href="#simulacao" class="btn btn-primary btn--lg">
+            Começar Agora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Phone Mockup -->
+      <div class="how-visual reveal-right">
+        <div class="how-phone-mockup">
+          <div class="how-phone-screen">
+            <div class="phone-header">
+              <div class="phone-logo">Creditxa</div>
+            </div>
+            <div class="phone-card">
+              <div class="phone-card__label">Empréstimo Aprovado ✓</div>
+              <div class="phone-card__amount">€15.000,00</div>
+              <div class="phone-card__meta">
+                <span>36 meses</span>
+                <span>€469/mês</span>
+              </div>
+            </div>
+            <div class="phone-progress">
+              <div class="phone-progress__label">
+                <span>Processo</span><span>Passo 3 de 4</span>
+              </div>
+              <div class="phone-progress__bar">
+                <div class="phone-progress__fill"></div>
+              </div>
+            </div>
+            <div class="phone-btn">✓ Assinar Contrato</div>
+            <div style="font-size:0.7rem;color:var(--text-light);text-align:center;">
+              Assinatura digital via Chave Móvel
+            </div>
+          </div>
+        </div>
+        <div class="how-floating how-floating--1">
+          <span class="how-floating__check">✅</span> Identidade verificada
+        </div>
+        <div class="how-floating how-floating--2">
+          <span class="how-floating__check">🔒</span> Ligação segura
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     SECURITY SECTION
+     ========================================= -->
+<section class="security section-pad" id="seguranca">
+  <div class="container">
+    <div class="security__inner">
+      <!-- Left Content -->
+      <div>
+        <div class="reveal">
+          <div class="section-label">Segurança Total</div>
+          <h2 class="section-title">Os seus dados protegidos com tecnologia de topo</h2>
+          <p class="section-sub">Na Creditxa, a segurança dos seus dados financeiros é a nossa prioridade absoluta. Utilizamos os mais avançados padrões de segurança.</p>
+        </div>
+        <div class="security-features">
+          <div class="security-feature reveal reveal-delay-1">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Encriptação SSL/TLS 256-bit</div>
+              <p class="security-feature__desc">Todos os dados são transmitidos com encriptação de nível bancário, garantindo privacidade total nas suas transações.</p>
+            </div>
+          </div>
+          <div class="security-feature reveal reveal-delay-2">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Autenticação de Dois Fatores (2FA)</div>
+              <p class="security-feature__desc">Proteja o acesso à sua conta com verificação dupla através de SMS ou aplicação autenticadora.</p>
+            </div>
+          </div>
+          <div class="security-feature reveal reveal-delay-3">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><eye viewBox="0 0 24 24"/><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Monitorização 24/7 em Tempo Real</div>
+              <p class="security-feature__desc">Sistemas automatizados detetam e bloqueiam atividades suspeitas antes que causem qualquer dano à sua conta.</p>
+            </div>
+          </div>
+          <div class="security-feature reveal reveal-delay-4">
+            <div class="security-feature__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="security-feature__title">Conformidade RGPD e PSD2</div>
+              <p class="security-feature__desc">Totalmente conforme com a regulamentação europeia de proteção de dados e diretivas de serviços de pagamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Shield Visual -->
+      <div class="security-visual reveal-right">
+        <div class="security-ring security-ring--1"></div>
+        <div class="security-ring security-ring--2"></div>
+        <div class="security-ring security-ring--3"></div>
+        <div class="security-shield">
+          <div class="security-shield__inner">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+        </div>
+        <div class="security-cert security-cert--1">
+          <span class="security-cert-icon">🏦</span>
+          Supervisionado pelo Banco de Portugal
+        </div>
+        <div class="security-cert security-cert--2">
+          <span class="security-cert-icon">🔐</span>
+          ISO 27001 Certificado
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     TESTIMONIALS
+     ========================================= -->
+<section class="testimonials section-pad" id="testemunhos">
+  <div class="container">
+    <div class="testimonials__header reveal">
+      <div class="section-label">Testemunhos</div>
+      <h2 class="section-title">O que dizem os nossos clientes</h2>
+      <p class="section-sub">Mais de 50.000 portugueses já confiaram na Creditxa para realizar os seus projetos de vida.</p>
+    </div>
+
+    <div class="testimonials-slider">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"Precisava de crédito urgente para renovar a minha cozinha. Em menos de 24 horas tinha o dinheiro na conta. Processo completamente online e sem complicações. Recomendo a toda a gente!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AP</div>
+            <div>
+              <div class="testimonial-name">Ana Paula Rodrigues</div>
+              <div class="testimonial-role">Professora · Lisboa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"Consolidei 4 créditos num só e a minha prestação baixou mais de €300 por mês. O consultor foi excecional, explicou tudo muito claramente. Já poupei bastante desde que mudei para a Creditxa."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">João Manuel Silva</div>
+              <div class="testimonial-role">Gestor Comercial · Porto</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"Consegui o crédito habitação com a melhor taxa do mercado. A equipa da Creditxa tratou de tudo, incluindo a comunicação com o notário. Comprei a minha primeira casa e estou muito feliz!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <div class="testimonial-name">Mariana Costa</div>
+              <div class="testimonial-role">Enfermeira · Braga</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"Crédito automóvel aprovado em 2 horas! Fui ao stand no mesmo dia com o financiamento aprovado. A taxa estava muito competitiva comparada com outros bancos. Serviço de excelência."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RF</div>
+            <div>
+              <div class="testimonial-name">Rui Ferreira</div>
+              <div class="testimonial-role">Técnico Informático · Coimbra</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"App muito intuitiva. Consigo gerir o meu crédito em qualquer lugar. O atendimento ao cliente é rápido e sempre disponível. Definitivamente a melhor experiência de crédito que tive em Portugal."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SL</div>
+            <div>
+              <div class="testimonial-name">Sofia Lima</div>
+              <div class="testimonial-role">Designer Gráfico · Faro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     FAQ
+     ========================================= -->
+<section class="faq section-pad" id="faq">
+  <div class="container">
+    <div class="faq__inner">
+      <div class="reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-sub">Tem dúvidas? Encontre aqui as respostas às perguntas mais comuns dos nossos clientes.</p>
+        <div style="margin-top:32px;">
+          <a href="#contacto" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Falar com Suporte
+          </a>
+        </div>
+      </div>
+
+      <div class="faq-items reveal-right">
+        <div class="faq-item open">
+          <div class="faq-question">
+            Quem pode pedir um crédito na Creditxa?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Qualquer cidadão português ou residente em Portugal, com idade entre 18 e 75 anos, com rendimentos regulares comprovados. Aceitamos trabalhadores por conta de outrem, trabalhadores independentes e reformados.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Quanto tempo demora a aprovação?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">A maioria dos pedidos de crédito pessoal recebe uma decisão em menos de 24 horas. Para crédito habitação, o processo é mais detalhado e pode demorar entre 5 a 10 dias úteis, incluindo avaliação do imóvel.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Que documentos são necessários?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Para crédito pessoal: Cartão de Cidadão (ou Passaporte), NIF, comprovativo de IBAN e últimos 3 recibos de vencimento. Para crédito habitação são também necessários documentos do imóvel. Tudo enviado digitalmente.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Existe penalização por reembolso antecipado?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, mas é muito reduzida. Para créditos a taxa variável, a penalização é de 0,5% do capital reembolsado antecipadamente. Para taxa fixa, é de 2%, conforme previsto no Decreto-Lei n.º 133/2009.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            É seguro enviar os meus documentos online?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutamente. Utilizamos encriptação SSL/TLS de 256 bits em todas as transmissões de dados, os mesmos padrões usados pelos maiores bancos mundiais. Os seus dados nunca são partilhados com terceiros sem o seu consentimento explícito.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Posso alterar a prestação após a aprovação?
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, oferecemos flexibilidade de pagamento. Pode solicitar uma moratória temporária (máximo 3 meses por ano), alterar o prazo do crédito ou fazer um reembolso parcial. Contacte a nossa equipa para analisar as opções disponíveis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     NEWSLETTER
+     ========================================= -->
+<section style="background:var(--sky);padding:64px 0;">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;text-align:center;" class="reveal">
+      <div class="section-label" style="justify-content:center;">Newsletter</div>
+      <h3 style="font-family:var(--font-head);font-size:1.8rem;margin-bottom:12px;">Fique a par das melhores ofertas</h3>
+      <p style="color:var(--text-light);margin-bottom:32px;">Receba em primeira mão as nossas promoções exclusivas, dicas financeiras e novidades Creditxa.</p>
+      <form id="newsletterForm" style="display:flex;gap:12px;max-width:480px;margin:0 auto;" onsubmit="return false;">
+        <input type="email" placeholder="O seu email" required
+          style="flex:1;padding:14px 20px;border:2px solid var(--border);border-radius:100px;font-size:0.9rem;font-family:var(--font-body);outline:none;transition:var(--transition);"
+          onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" />
+        <button type="submit" class="btn btn-primary">Subscrever</button>
+      </form>
+      <p style="font-size:0.75rem;color:var(--text-light);margin-top:12px;">Pode cancelar a qualquer momento. Sem spam, prometemos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     CTA
+     ========================================= -->
+<section class="cta-section" id="contacto">
+  <div class="container">
+    <div class="cta-section__inner">
+      <div class="reveal">
+        <div class="section-label" style="justify-content:center;color:rgba(255,255,255,0.8);">
+          <span style="background:rgba(255,255,255,0.3);"></span>
+          Comece Hoje
+        </div>
+        <h2>Pronto para realizar o seu projeto?</h2>
+        <p>Junte-se a mais de 50.000 portugueses que já confiam na Creditxa. Simulação gratuita, sem compromisso.</p>
+        <div class="cta-section__actions">
+          <a href="#simulacao" class="btn btn-white btn--lg" data-apply="Simular Gratuitamente">
+            Simular Gratuitamente
+          </a>
+          <a href="tel:+351210000000" class="btn btn-ghost btn--lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +351 210 000 000
+          </a>
+        </div>
+        <div class="cta-app-badges">
+          <a href="#" class="app-badge">
+            <span class="app-badge__icon">🍎</span>
+            <div class="app-badge__text">
+              <div class="app-badge__sub">Disponível na</div>
+              <div class="app-badge__name">App Store</div>
+            </div>
+          </a>
+          <a href="#" class="app-badge">
+            <span class="app-badge__icon">▶</span>
+            <div class="app-badge__text">
+              <div class="app-badge__sub">Disponível no</div>
+              <div class="app-badge__name">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__main">
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--image">
+          <img src="assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+        </a>
+        <p style="margin-top:14px;">A sua instituição financeira de confiança. Crédito rápido, seguro e transparente para todos os momentos da sua vida.</p>
+        <div class="footer__license">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Supervisionada pelo Banco de Portugal — Reg. Nº 12345
+        </div>
+        <div class="footer__brand-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+        </div>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <div class="footer__col-title">Produtos</div>
+        <ul class="footer__links">
+          <li><a href="pages/emprestimo-pessoal.html" class="footer__link">→ Empréstimo Pessoal</a></li>
+          <li><a href="pages/credito-habitacao.html" class="footer__link">→ Crédito Habitação</a></li>
+          <li><a href="pages/credito-automovel.html" class="footer__link">→ Crédito Automóvel</a></li>
+          <li><a href="pages/consolidacao.html" class="footer__link">→ Consolidação de Créditos</a></li>
+          <li><a href="#simulacao" class="footer__link">→ Simulador de Crédito</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <div class="footer__col-title">Recursos</div>
+        <ul class="footer__links">
+          <li><a href="pages/guia-credito-portugal.html" class="footer__link">→ Guia de Crédito 2026</a></li>
+          <li><a href="pages/guia-credito-portugal.html#taxas" class="footer__link">→ Taxas & Comparações</a></li>
+          <li><a href="pages/guia-credito-portugal.html#multibanco" class="footer__link">→ Multibanco & MB Way</a></li>
+          <li><a href="pages/guia-credito-portugal.html#residentes-estrangeiros" class="footer__link">→ Crédito para Estrangeiros</a></li>
+          <li><a href="pages/guia-credito-portugal.html#faq" class="footer__link">→ Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Empresa</div>
+        <ul class="footer__links">
+          <li><a href="pages/sobre-nos.html" class="footer__link">→ Sobre Nós</a></li>
+          <li><a href="pages/carreiras.html" class="footer__link">→ Carreiras</a></li>
+          <li><a href="pages/imprensa.html" class="footer__link">→ Imprensa</a></li>
+          <li><a href="pages/responsabilidade.html" class="footer__link">→ Responsabilidade Social</a></li>
+          <li><a href="pages/parceiros.html" class="footer__link">→ Parceiros</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer__col-title">Contacto</div>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1"/><path d="M1 1l22 22"/></svg>
+            <div>
+              <div style="color:rgba(255,255,255,0.8);font-weight:600;">+351 210 000 000</div>
+              <div style="font-size:0.75rem;">Seg–Sex, 9h–20h | Sáb 9h–13h</div>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <div style="color:rgba(255,255,255,0.8);font-weight:600;">apoio@creditxa.pt</div>
+              <div style="font-size:0.75rem;">Resposta em até 4 horas</div>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div style="color:rgba(255,255,255,0.6);">Av. da Liberdade, 110<br/>1269-046 Lisboa, Portugal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div>
+        <p>© 2025 Creditxa — Todos os direitos reservados.</p>
+        <p style="margin-top:4px;">Creditxa, S.A. — NIF 123 456 789 — Capital Social €10.000.000</p>
+      </div>
+      <div class="footer__bottom-links">
+        <a href="pages/privacidade.html" class="footer__bottom-link">Política de Privacidade</a>
+        <a href="pages/termos.html" class="footer__bottom-link">Termos e Condições</a>
+        <a href="pages/cookies.html" class="footer__bottom-link">Política de Cookies</a>
+        <a href="pages/reclamacoes.html" class="footer__bottom-link">Livro de Reclamações</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================
+     FLOATING CHAT + SCROLL TOP + TOAST
+     ========================================= -->
+<div class="fab-chat">
+  <div class="fab-chat__bubble">Olá! 👋 Precisas de ajuda? Fala connosco!</div>
+  <button class="fab-btn" aria-label="Chat de suporte">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+
+<button class="scroll-top" aria-label="Voltar ao topo">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">ℹ️</span>
+  <span class="toast-msg">Mensagem</span>
+</div>
+
+<!-- Cookie Banner -->
+<div id="cookieBanner" style="
+  position:fixed;bottom:0;left:0;right:0;z-index:9998;
+  background:var(--text-dark);color:rgba(255,255,255,0.85);
+  padding:20px 32px;display:flex;align-items:center;
+  justify-content:space-between;gap:24px;flex-wrap:wrap;
+  box-shadow:0 -4px 32px rgba(0,0,0,0.2);
+  font-size:0.88rem;
+">
+  <p style="max-width:700px;">
+    🍪 Utilizamos cookies para melhorar a sua experiência e analisar o tráfego do site. 
+    Ao continuar, concorda com a nossa <a href="pages/cookies.html" style="color:var(--accent-bright);text-decoration:underline;">Política de Cookies</a>.
+  </p>
+  <div style="display:flex;gap:12px;flex-shrink:0;">
+    <button onclick="document.getElementById('cookieBanner').style.display='none'" class="btn btn-ghost btn--sm">Recusar</button>
+    <button onclick="document.getElementById('cookieBanner').style.display='none'" class="btn btn-accent btn--sm">Aceitar Tudo</button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/application-modal.js"></script>
+<!-- Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL      = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  window._supabase = _supabase;
+
+  // ── Newsletter subscribe ──
+  const nForm = document.getElementById('newsletterForm');
+  if (nForm) {
+    nForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const emailVal = nForm.querySelector('input[type="email"]').value.trim();
+      const btn = nForm.querySelector('button');
+      btn.textContent = 'A subscrever...';
+      btn.disabled = true;
+      const { error } = await _supabase.from('newsletter_subscribers').insert({ email: emailVal, source: 'website' });
+      if (error && error.code === '23505') {
+        btn.textContent = 'Já subscrito ✓';
+      } else if (error) {
+        btn.textContent = 'Erro. Tente de novo.';
+        btn.disabled = false;
+      } else {
+        btn.textContent = 'Subscrito ✓';
+        nForm.querySelector('input').value = '';
+      }
+    });
+  }
+
+  // ── Loan application — opens full KYC application modal ──
+  const applyBtn = document.getElementById('applyBtn');
+  if (applyBtn) {
+    applyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Read current simulator state to prefill the application
+      const amountSlider = document.getElementById('loanAmount');
+      const termSlider   = document.getElementById('loanTerm');
+      const activeTab    = document.querySelector('.calc-tab.active');
+      const tabTypeMap   = { pessoal: 'personal', habitacao: 'mortgage', automovel: 'car' };
+
+      window.openApplicationModal({
+        amount:   amountSlider ? parseFloat(amountSlider.value) : 10000,
+        term:     termSlider ? parseInt(termSlider.value) : 36,
+        loanType: tabTypeMap[activeTab ? activeTab.dataset.type : 'pessoal'] || 'personal',
+      });
+    });
+  }
+</script>
+<!-- ============================================================
+     CREDITXA — Loan Application Modal
+     Collects full KYC data per Banco de Portugal lending rules
+     ============================================================ -->
+<div class="app-modal-overlay" id="appModalOverlay">
+  <div class="app-modal">
+
+    <div class="app-modal__header">
+      <div class="app-modal__top">
+        <div class="app-modal__title" id="appModalTitle">Pedido de Crédito</div>
+        <button class="app-modal__close" id="appModalClose" type="button">✕</button>
+      </div>
+      <div class="app-modal__steps">
+        <div class="app-modal__step-bar active" data-step-bar="1"></div>
+        <div class="app-modal__step-bar" data-step-bar="2"></div>
+        <div class="app-modal__step-bar" data-step-bar="3"></div>
+        <div class="app-modal__step-bar" data-step-bar="4"></div>
+      </div>
+    </div>
+
+    <div class="app-modal__body">
+      <form id="appForm" novalidate>
+
+        <!-- ═══ STEP 1 — Personal Identity ═══ -->
+        <div class="app-form-step active" data-step="1">
+          <div class="app-modal__step-label">Passo 1 de 4</div>
+          <div class="app-modal__step-desc">Dados pessoais e de identificação</div>
+
+          <div class="app-field">
+            <label>Nome Completo <span class="req">*</span></label>
+            <input type="text" name="full_name" placeholder="Ex: Maria Santos Ferreira" required autocomplete="name" />
+            <div class="error-msg">Por favor introduza o seu nome completo.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Data de Nascimento <span class="req">*</span></label>
+              <input type="date" name="date_of_birth" required autocomplete="bday" />
+              <div class="error-msg">Tem de ter pelo menos 18 anos.</div>
+            </div>
+            <div class="app-field">
+              <label>Nacionalidade <span class="req">*</span></label>
+              <input type="text" name="nationality" placeholder="Ex: Portuguesa" required />
+              <div class="error-msg">Campo obrigatório.</div>
+            </div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Telefone <span class="req">*</span></label>
+              <input type="tel" name="phone" placeholder="+351 9XX XXX XXX" required autocomplete="tel" />
+              <div class="error-msg">Introduza um número de telefone válido.</div>
+            </div>
+            <div class="app-field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="o.seu@email.pt" required autocomplete="email" />
+              <div class="error-msg">Introduza um email válido.</div>
+            </div>
+          </div>
+
+          <div class="app-field">
+            <label>NIF — Número de Identificação Fiscal <span class="req">*</span></label>
+            <input type="text" name="nif" placeholder="123456789" maxlength="9" inputmode="numeric" required />
+            <div class="hint">9 dígitos, sem espaços. Obrigatório para qualquer operação de crédito em Portugal.</div>
+            <div class="error-msg">O NIF deve ter exatamente 9 dígitos.</div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 2 — Residency & ID Document ═══ -->
+        <div class="app-form-step" data-step="2">
+          <div class="app-modal__step-label">Passo 2 de 4</div>
+          <div class="app-modal__step-desc">Residência e documento de identificação</div>
+
+          <div class="app-field">
+            <label>Endereço Residencial em Portugal <span class="req">*</span></label>
+            <input type="text" name="address" placeholder="Rua, Número, Localidade, Código Postal" required />
+            <div class="error-msg">Por favor indique o seu endereço completo.</div>
+          </div>
+
+          <div class="app-field">
+            <label>Estatuto de Residência <span class="req">*</span></label>
+            <div class="app-pill-group" data-pill-name="residence_status">
+              <div class="app-pill" data-value="citizen">🇵🇹 Cidadão Português</div>
+              <div class="app-pill" data-value="eu_resident">🇪🇺 Residente UE</div>
+              <div class="app-pill" data-value="non_eu_resident">🌍 Residente Não-UE</div>
+              <div class="app-pill" data-value="non_resident">✈️ Não-Residente</div>
+            </div>
+            <input type="hidden" name="residence_status" required />
+            <div class="error-msg">Por favor selecione o seu estatuto de residência.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Tipo de Documento <span class="req">*</span></label>
+              <select name="id_document_type" required>
+                <option value="">Selecione...</option>
+                <option value="cc">Cartão de Cidadão</option>
+                <option value="passport">Passaporte</option>
+                <option value="residence_permit">Título de Residência</option>
+              </select>
+              <div class="error-msg">Selecione o tipo de documento.</div>
+            </div>
+            <div class="app-field">
+              <label>Número do Documento <span class="req">*</span></label>
+              <input type="text" name="id_document_number" placeholder="Nº do documento" required />
+              <div class="error-msg">Introduza o número do documento.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 3 — Employment, Income & IBAN ═══ -->
+        <div class="app-form-step" data-step="3">
+          <div class="app-modal__step-label">Passo 3 de 4</div>
+          <div class="app-modal__step-desc">Situação profissional e dados bancários</div>
+
+          <div class="app-field">
+            <label>Situação de Emprego <span class="req">*</span></label>
+            <div class="app-pill-group" data-pill-name="employment_status">
+              <div class="app-pill" data-value="employed">Trabalhador por Conta de Outrem</div>
+              <div class="app-pill" data-value="self_employed">Trabalhador Independente</div>
+              <div class="app-pill" data-value="business_owner">Empresário</div>
+              <div class="app-pill" data-value="retired">Aposentado</div>
+              <div class="app-pill" data-value="student">Estudante</div>
+              <div class="app-pill" data-value="unemployed">Desempregado</div>
+            </div>
+            <input type="hidden" name="employment_status" required />
+            <div class="error-msg">Por favor selecione a sua situação de emprego.</div>
+          </div>
+
+          <div class="app-form-row">
+            <div class="app-field">
+              <label>Rendimento Mensal Líquido (€) <span class="req">*</span></label>
+              <input type="number" name="monthly_income" placeholder="2000" min="0" step="50" required />
+              <div class="error-msg">Indique o seu rendimento mensal.</div>
+            </div>
+            <div class="app-field">
+              <label>Dívidas Existentes (€) <span class="opt">opcional</span></label>
+              <input type="number" name="existing_debts" placeholder="0" min="0" step="50" />
+              <div class="hint">Soma de prestações mensais de outros créditos</div>
+            </div>
+          </div>
+
+          <div class="app-field">
+            <label>IBAN <span class="req">*</span></label>
+            <input type="text" name="iban" placeholder="PT50 0000 0000 0000 0000 0000 0" required maxlength="34" />
+            <div class="hint">Conta para onde o crédito será transferido, caso aprovado</div>
+            <div class="error-msg">Introduza um IBAN válido (formato português: PT50...).</div>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 4 — Loan Details & Review ═══ -->
+        <div class="app-form-step" data-step="4">
+          <div class="app-modal__step-label">Passo 4 de 4</div>
+          <div class="app-modal__step-desc">Detalhes do crédito e confirmação final</div>
+
+          <div class="app-field">
+            <label>Finalidade do Crédito <span class="req">*</span></label>
+            <select name="loan_purpose" required>
+              <option value="">Selecione...</option>
+              <option value="Despesas pessoais">Despesas Pessoais</option>
+              <option value="Educação">Educação</option>
+              <option value="Saúde">Saúde / Despesas Médicas</option>
+              <option value="Viagem">Viagem</option>
+              <option value="Consolidação de dívidas">Consolidação de Dívidas</option>
+              <option value="Compra de viatura">Compra de Viatura</option>
+              <option value="Obras / Habitação">Obras / Habitação</option>
+              <option value="Negócio próprio">Negócio Próprio</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <div class="error-msg">Selecione a finalidade do crédito.</div>
+          </div>
+
+          <div class="app-summary" id="appSummary">
+            <!-- Filled dynamically by JS -->
+          </div>
+
+          <label class="app-consent">
+            <input type="checkbox" name="consent" required />
+            <span>Declaro que as informações fornecidas são verdadeiras e autorizo a Creditxa a consultar o Registo Central de Crédito do Banco de Portugal e a processar os meus dados pessoais nos termos da <a href="pages/privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+        </div>
+
+        <!-- ═══ SUCCESS STATE ═══ -->
+        <div class="app-modal__success" data-step="success" style="display:none;">
+          <div class="app-modal__success-icon">✅</div>
+          <h3>Pedido Enviado com Sucesso!</h3>
+          <p>Recebemos o seu pedido de crédito. A nossa equipa vai analisar a sua candidatura e entraremos em contacto dentro de 24 horas.</p>
+          <div class="ref-code" id="appRefCode">#CR-0000</div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="app-modal__footer" id="appModalFooter">
+      <button type="button" class="btn btn-ghost btn--back" id="appBtnBack" style="display:none;">← Voltar</button>
+      <button type="button" class="btn btn-primary" id="appBtnNext">Continuar →</button>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

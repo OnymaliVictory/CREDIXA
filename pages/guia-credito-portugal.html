@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Guia completo sobre crédito e banca em Portugal 2026 — taxas, requisitos, Multibanco, MB Way, registo de crédito e tudo o que precisa de saber." />
+  <title>Guia Completo de Crédito em Portugal 2026 | Creditxa</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon-32.png" />
+  <style>
+    /* ── Page Variables ── */
+    :root {
+      --primary:#003F8C; --primary-dark:#001836; --accent:#00BFFF; --accent2:#0093E8;
+      --success:#2E7D32; --warning:#F57C00; --danger:#C62828;
+      --text-dark:#0D1B2A; --text-mid:#4A5568; --text-light:#90A0B7;
+      --border:#E2E8F0; --off-white:#F4F7FB; --white:#FFFFFF;
+      --radius:14px; --radius-sm:8px;
+      --shadow:0 2px 16px rgba(0,0,0,0.08); --shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+      --font:'Segoe UI',system-ui,-apple-system,sans-serif;
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font); color:var(--text-dark); background:var(--white); line-height:1.65; }
+    .container { max-width:1140px; margin:0 auto; padding:0 24px; }
+
+    /* ── Hero ── */
+    .guide-hero {
+      background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #0066CC 100%);
+      padding:140px 0 80px; color:white; position:relative; overflow:hidden;
+    }
+    .guide-hero::before {
+      content:''; position:absolute; inset:0;
+      background-image:
+        radial-gradient(circle at 75% 30%, rgba(0,191,255,0.25) 0%, transparent 55%),
+        linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
+      background-size:auto,60px 60px,60px 60px;
+    }
+    .guide-hero__content { position:relative; z-index:1; max-width:760px; }
+    .guide-hero__badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(0,191,255,0.2); border:1px solid rgba(0,191,255,0.4);
+      color:var(--accent); font-size:0.8rem; font-weight:700;
+      padding:8px 16px; border-radius:100px; letter-spacing:0.06em;
+      text-transform:uppercase; margin-bottom:24px;
+    }
+    .guide-hero h1 { font-size:clamp(2rem,5vw,3.2rem); font-weight:800; line-height:1.15; margin-bottom:20px; letter-spacing:-0.02em; }
+    .guide-hero h1 span { color:var(--accent); }
+    .guide-hero p { font-size:1.05rem; color:rgba(255,255,255,0.75); max-width:580px; }
+    .hero-stats { display:flex; gap:32px; margin-top:36px; flex-wrap:wrap; }
+    .hero-stat { }
+    .hero-stat .num { font-size:1.8rem; font-weight:800; color:var(--accent); line-height:1; }
+    .hero-stat .lbl { font-size:0.78rem; color:rgba(255,255,255,0.55); margin-top:2px; }
+
+    /* ── TOC Sidebar Layout ── */
+    .guide-layout { display:grid; grid-template-columns:260px 1fr; gap:48px; padding:60px 0 80px; align-items:start; }
+    @media(max-width:900px){ .guide-layout { grid-template-columns:1fr; } .toc { display:none; } }
+
+    .toc { position:sticky; top:88px; }
+    .toc-card { background:var(--off-white); border:1px solid var(--border); border-radius:var(--radius); padding:24px; }
+    .toc-title { font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-light); margin-bottom:16px; }
+    .toc a { display:block; font-size:0.84rem; color:var(--text-mid); padding:7px 12px; border-radius:6px; text-decoration:none; transition:0.15s; border-left:2px solid transparent; }
+    .toc a:hover { background:white; color:var(--primary); border-left-color:var(--accent); }
+    .toc a.active { background:white; color:var(--primary); border-left-color:var(--primary); font-weight:600; }
+    .toc-sub { font-size:0.78rem; padding-left:24px; color:var(--text-light); }
+
+    /* ── Content Sections ── */
+    .guide-content { min-width:0; }
+    .guide-section { margin-bottom:72px; scroll-margin-top:100px; }
+    .section-label { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent2); margin-bottom:10px; }
+    .guide-section h2 { font-size:1.9rem; font-weight:800; color:var(--text-dark); letter-spacing:-0.02em; margin-bottom:14px; line-height:1.2; }
+    .guide-section > p { font-size:0.95rem; color:var(--text-mid); margin-bottom:20px; max-width:680px; }
+    .divider { height:1px; background:var(--border); margin-bottom:32px; }
+
+    /* ── Info Cards ── */
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-bottom:28px; }
+    .info-card {
+      background:var(--white); border:1px solid var(--border); border-radius:var(--radius);
+      padding:24px; box-shadow:var(--shadow); transition:0.2s;
+    }
+    .info-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); }
+    .info-card .icon { font-size:1.8rem; margin-bottom:12px; }
+    .info-card h3 { font-size:0.95rem; font-weight:700; color:var(--text-dark); margin-bottom:8px; }
+    .info-card p { font-size:0.83rem; color:var(--text-mid); line-height:1.55; }
+    .info-card .tag { display:inline-block; font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:100px; margin-top:10px; }
+    .tag-blue { background:#E3F0FF; color:var(--primary); }
+    .tag-green { background:#E8F5E9; color:var(--success); }
+    .tag-orange { background:#FFF3E0; color:var(--warning); }
+    .tag-red { background:#FFEBEE; color:var(--danger); }
+
+    /* ── Rate Table ── */
+    .rate-table-wrap { overflow-x:auto; border-radius:var(--radius); border:1px solid var(--border); margin-bottom:28px; box-shadow:var(--shadow); }
+    .rate-table { width:100%; border-collapse:collapse; font-size:0.88rem; }
+    .rate-table thead { background:var(--primary); color:white; }
+    .rate-table thead th { padding:14px 18px; text-align:left; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
+    .rate-table tbody tr { border-bottom:1px solid var(--border); transition:0.15s; }
+    .rate-table tbody tr:last-child { border-bottom:none; }
+    .rate-table tbody tr:hover { background:var(--off-white); }
+    .rate-table td { padding:14px 18px; color:var(--text-mid); vertical-align:middle; }
+    .rate-table td strong { color:var(--text-dark); }
+    .rate-table td .pill { display:inline-block; padding:3px 10px; border-radius:100px; font-size:0.75rem; font-weight:700; }
+    .pill-green { background:#E8F5E9; color:var(--success); }
+    .pill-blue { background:#E3F0FF; color:var(--primary); }
+    .pill-orange { background:#FFF3E0; color:var(--warning); }
+
+    /* ── Step List ── */
+    .step-list { list-style:none; margin-bottom:28px; }
+    .step-list li { display:flex; gap:20px; padding:20px 0; border-bottom:1px solid var(--border); }
+    .step-list li:last-child { border-bottom:none; }
+    .step-num { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--accent)); color:white; font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .step-body h4 { font-size:0.95rem; font-weight:700; color:var(--text-dark); margin-bottom:5px; }
+    .step-body p { font-size:0.84rem; color:var(--text-mid); }
+
+    /* ── Highlight Box ── */
+    .highlight-box { border-radius:var(--radius); padding:24px 28px; margin-bottom:24px; border-left:4px solid; }
+    .highlight-box.info { background:#E3F0FF; border-color:var(--accent2); }
+    .highlight-box.success { background:#E8F5E9; border-color:var(--success); }
+    .highlight-box.warning { background:#FFF3E0; border-color:var(--warning); }
+    .highlight-box.danger { background:#FFEBEE; border-color:var(--danger); }
+    .highlight-box h4 { font-size:0.88rem; font-weight:700; margin-bottom:6px; }
+    .highlight-box.info h4 { color:var(--primary); }
+    .highlight-box.success h4 { color:var(--success); }
+    .highlight-box.warning h4 { color:var(--warning); }
+    .highlight-box.danger h4 { color:var(--danger); }
+    .highlight-box p, .highlight-box ul { font-size:0.84rem; color:var(--text-mid); }
+    .highlight-box ul { padding-left:18px; }
+    .highlight-box li { margin-bottom:4px; }
+
+    /* ── Two-col layout ── */
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:28px; }
+    @media(max-width:640px){ .two-col { grid-template-columns:1fr; } }
+
+    /* ── Feature Row ── */
+    .feature-row { display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid var(--border); }
+    .feature-row:last-child { border-bottom:none; }
+    .feature-icon { width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+    .fi-blue { background:#E3F0FF; }
+    .fi-green { background:#E8F5E9; }
+    .fi-orange { background:#FFF3E0; }
+    .fi-purple { background:#F3E5F5; }
+    .feature-row h4 { font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:3px; }
+    .feature-row p { font-size:0.82rem; color:var(--text-mid); }
+
+    /* ── Comparison Cards ── */
+    .compare-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-bottom:28px; }
+    .compare-card { border:2px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center; transition:0.2s; }
+    .compare-card:hover { border-color:var(--accent); }
+    .compare-card .cc-icon { font-size:2rem; margin-bottom:10px; }
+    .compare-card h3 { font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:6px; }
+    .compare-card .cc-rate { font-size:1.4rem; font-weight:800; color:var(--primary); margin-bottom:4px; }
+    .compare-card .cc-label { font-size:0.72rem; color:var(--text-light); }
+    .compare-card .cc-note { font-size:0.78rem; color:var(--text-mid); margin-top:10px; }
+
+    /* ── CTA Banner ── */
+    .cta-banner {
+      background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+      border-radius:var(--radius); padding:40px; color:white;
+      display:flex; align-items:center; justify-content:space-between; gap:24px;
+      flex-wrap:wrap; margin-top:60px;
+    }
+    .cta-banner h3 { font-size:1.4rem; font-weight:800; margin-bottom:6px; }
+    .cta-banner p { font-size:0.88rem; color:rgba(255,255,255,0.7); }
+    .btn-cta { background:var(--accent); color:var(--primary-dark); font-weight:800; padding:14px 28px; border-radius:var(--radius-sm); text-decoration:none; font-size:0.95rem; white-space:nowrap; transition:0.2s; display:inline-block; }
+    .btn-cta:hover { background:white; }
+
+    /* ── MB Way / Multibanco ── */
+    .payment-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-bottom:28px; }
+    .payment-card { border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); }
+    .payment-card-header { padding:20px 24px; display:flex; align-items:center; gap:14px; }
+    .payment-logo { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:900; color:white; }
+    .logo-mb { background:linear-gradient(135deg,#003F8C,#0066CC); }
+    .logo-mbway { background:linear-gradient(135deg,#C62828,#E53935); }
+    .logo-sepa { background:linear-gradient(135deg,#1565C0,#1976D2); }
+    .logo-sibs { background:linear-gradient(135deg,#00695C,#00897B); }
+    .payment-card-header h3 { font-size:1rem; font-weight:700; color:var(--text-dark); }
+    .payment-card-header p { font-size:0.78rem; color:var(--text-light); }
+    .payment-card-body { padding:0 24px 20px; }
+    .payment-feature { display:flex; align-items:center; gap:8px; font-size:0.83rem; color:var(--text-mid); padding:5px 0; }
+    .payment-feature::before { content:'✓'; color:var(--success); font-weight:700; flex-shrink:0; }
+    .payment-limit { display:flex; justify-content:space-between; padding:12px 0; border-top:1px solid var(--border); margin-top:12px; font-size:0.8rem; }
+    .payment-limit .pl-label { color:var(--text-light); }
+    .payment-limit .pl-value { font-weight:700; color:var(--primary); }
+
+    /* ── Doc checklist ── */
+    .doc-list { list-style:none; margin-bottom:20px; }
+    .doc-list li { display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); font-size:0.88rem; color:var(--text-mid); }
+    .doc-list li:last-child { border-bottom:none; }
+    .doc-list li .check { width:22px; height:22px; border-radius:50%; background:#E8F5E9; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:var(--success); flex-shrink:0; margin-top:1px; font-weight:700; }
+    .doc-list li strong { color:var(--text-dark); }
+
+    /* ── FAQ ── */
+    .faq-item { border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:10px; overflow:hidden; }
+    .faq-q { padding:18px 20px; font-size:0.92rem; font-weight:600; color:var(--text-dark); cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:white; transition:0.15s; }
+    .faq-q:hover { background:var(--off-white); }
+    .faq-q .arrow { font-size:1rem; transition:transform 0.2s; color:var(--text-light); }
+    .faq-a { display:none; padding:0 20px 18px; font-size:0.85rem; color:var(--text-mid); line-height:1.65; }
+    .faq-item.open .faq-q { background:var(--off-white); color:var(--primary); }
+    .faq-item.open .arrow { transform:rotate(180deg); color:var(--primary); }
+    .faq-item.open .faq-a { display:block; }
+
+    /* ── Responsive nav fixes ── */
+    .header { position:fixed; top:0; left:0; right:0; z-index:200; }
+    .header__inner { max-width:1140px; margin:0 auto; padding:0 24px; height:72px; display:flex; align-items:center; gap:32px; }
+    .logo { display:flex; align-items:center; gap:8px; font-size:1.4rem; font-weight:900; text-decoration:none; letter-spacing:-0.02em; }
+    .logo__icon { width:34px; height:34px; background:var(--primary); color:var(--accent); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1rem; font-weight:900; }
+    .nav { display:flex; gap:4px; margin-left:auto; }
+    .nav__link { display:flex; align-items:center; gap:6px; padding:8px 14px; border-radius:8px; font-size:0.88rem; color:var(--text-mid); text-decoration:none; font-weight:500; transition:0.15s; }
+    .nav__link:hover { background:var(--off-white); color:var(--primary); }
+    .nav-actions { display:flex; align-items:center; gap:10px; }
+    .nav-login { font-size:0.88rem; font-weight:600; color:var(--primary); text-decoration:none; padding:8px 14px; border-radius:8px; transition:0.15s; }
+    .nav-login:hover { background:var(--off-white); }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:10px 20px; border-radius:var(--radius-sm); font-size:0.88rem; font-weight:700; text-decoration:none; transition:0.2s; cursor:pointer; border:none; }
+    .btn-accent { background:var(--accent); color:var(--primary-dark); }
+    .btn-accent:hover { background:#00AAEE; }
+    .btn--sm { padding:8px 16px; font-size:0.82rem; }
+    .hamburger { display:none; }
+    @media(max-width:768px){ .nav,.nav-actions { display:none; } .hamburger { display:flex; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px; } .hamburger__bar { width:22px; height:2px; border-radius:2px; } }
+    .mobile-menu { display:none; }
+
+    /* ── Progress / Bar ── */
+    .progress-row { margin-bottom:14px; }
+    .progress-row .pr-header { display:flex; justify-content:space-between; font-size:0.82rem; margin-bottom:6px; }
+    .progress-row .pr-label { font-weight:600; color:var(--text-dark); }
+    .progress-row .pr-val { font-weight:700; color:var(--primary); }
+    .prog-bar { height:8px; background:var(--border); border-radius:100px; overflow:hidden; }
+    .prog-fill { height:100%; border-radius:100px; background:linear-gradient(90deg,var(--primary),var(--accent)); }
+
+    /* ── Timeline ── */
+    .timeline { position:relative; padding-left:28px; margin-bottom:24px; }
+    .timeline::before { content:''; position:absolute; left:10px; top:0; bottom:0; width:2px; background:var(--border); }
+    .tl-item { position:relative; padding-bottom:28px; }
+    .tl-item:last-child { padding-bottom:0; }
+    .tl-dot { position:absolute; left:-23px; top:3px; width:12px; height:12px; border-radius:50%; background:var(--primary); border:2px solid white; box-shadow:0 0 0 2px var(--primary); }
+    .tl-dot.green { background:var(--success); box-shadow:0 0 0 2px var(--success); }
+    .tl-dot.orange { background:var(--warning); box-shadow:0 0 0 2px var(--warning); }
+    .tl-item h4 { font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:4px; }
+    .tl-item p { font-size:0.82rem; color:var(--text-mid); }
+    .tl-item .tl-time { font-size:0.72rem; font-weight:700; color:var(--accent2); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="header" style="background:var(--white);box-shadow:0 1px 0 var(--border);">
+  <div class="header__inner">
+    <a href="../index.html" class="logo" style="color:var(--primary);">
+      <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" />
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Início
+      </a>
+      <a href="../index.html#produtos" class="nav__link">Produtos</a>
+      <a href="../index.html#simulacao" class="nav__link">Simulador</a>
+      <a href="../index.html#contacto" class="nav__link">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login">Entrar</a>
+      <a href="../index.html#simulacao" class="btn btn-accent btn--sm">Simular Agora</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+      <span class="hamburger__bar" style="background:var(--primary);"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="guide-hero__content">
+      <div class="guide-hero__badge">📚 Guia Completo · Atualizado 2026</div>
+      <h1>Tudo Sobre <span>Crédito e Banca</span><br>em Portugal</h1>
+      <p>Da Multibanco ao MB Way, das taxas Euribor ao Registo Central de Crédito — o guia mais completo sobre o sistema financeiro português, escrito em linguagem clara.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">3,09%</div><div class="lbl">Taxa média habitação (Abr. 2026)</div></div>
+        <div class="hero-stat"><div class="num">11.000</div><div class="lbl">ATMs Multibanco em Portugal</div></div>
+        <div class="hero-stat"><div class="num">+150</div><div class="lbl">Bancos a operar em Portugal</div></div>
+        <div class="hero-stat"><div class="num">+10%</div><div class="lbl">Crescimento do crédito em 2026</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MAIN LAYOUT ── -->
+<div class="container">
+  <div class="guide-layout">
+
+    <!-- ── TABLE OF CONTENTS ── -->
+    <aside class="toc">
+      <div class="toc-card">
+        <div class="toc-title">Índice</div>
+        <a href="#sistema-bancario" class="toc-link">🏦 Sistema Bancário</a>
+        <a href="#multibanco" class="toc-link">💳 Multibanco & MB Way</a>
+        <a href="#tipos-credito" class="toc-link">💰 Tipos de Crédito</a>
+        <a href="#taxas" class="toc-link">📊 Taxas — 2026</a>
+        <a href="#como-funciona" class="toc-link">⚙️ Como Funciona</a>
+        <a href="#documentos" class="toc-link">📋 Documentos</a>
+        <a href="#registo-credito" class="toc-link">🔍 Registo Central</a>
+        <a href="#residentes-estrangeiros" class="toc-link">🌍 Estrangeiros</a>
+        <a href="#dicas" class="toc-link">💡 Dicas Práticas</a>
+        <a href="#faq" class="toc-link">❓ FAQ</a>
+        <div style="border-top:1px solid var(--border);margin:16px 0;"></div>
+        <a href="../index.html#simulacao" class="btn btn-accent" style="width:100%;justify-content:center;font-size:0.85rem;">Simular Crédito →</a>
+      </div>
+    </aside>
+
+    <!-- ── GUIDE CONTENT ── -->
+    <main class="guide-content">
+
+      <!-- ══════════════════════════════
+           SECTION 1 — SISTEMA BANCÁRIO
+      ══════════════════════════════ -->
+      <section class="guide-section" id="sistema-bancario">
+        <div class="section-label">Secção 1</div>
+        <h2>O Sistema Bancário Português</h2>
+        <p>Portugal possui um dos sistemas bancários mais modernos da Europa, supervisionado pelo <strong>Banco de Portugal</strong> e integrado no sistema do Banco Central Europeu (BCE) desde 1999, quando o país adotou o Euro.</p>
+        <div class="divider"></div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="icon">🏛️</div>
+            <h3>Banco de Portugal</h3>
+            <p>Autoridade supervisora de todos os bancos, cooperativas de crédito e financeiras em Portugal. Gere o Registo Central de Crédito (RCC) e publica estatísticas mensais.</p>
+            <span class="tag tag-blue">Regulador Nacional</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🇪🇺</div>
+            <h3>Banco Central Europeu</h3>
+            <p>Supervisão adicional para os maiores bancos. Define as taxas Euribor que impactam diretamente os créditos à habitação e empréstimos a taxa variável em Portugal.</p>
+            <span class="tag tag-blue">Regulador Europeu</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🏪</div>
+            <h3>+150 Bancos Ativos</h3>
+            <p>Inclui bancos nacionais (CGD, BCP, Novobanco, BPI, Santander Totta), bancos digitais (ActivoBank, Openbank, Revolut) e bancos internacionais.</p>
+            <span class="tag tag-green">Sector Diversificado</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🔐</div>
+            <h3>Garantia de Depósitos</h3>
+            <p>O Fundo de Garantia de Depósitos protege os depositantes até <strong>€100.000 por titular</strong> em caso de insolvência bancária, em linha com a diretiva europeia.</p>
+            <span class="tag tag-green">Protecção Legal</span>
+          </div>
+        </div>
+
+        <div class="highlight-box info">
+          <h4>📌 O que é o NIF e por que é obrigatório?</h4>
+          <p>O <strong>Número de Identificação Fiscal (NIF)</strong> é o número único atribuído pela AT (Autoridade Tributária) a cada contribuinte. Em Portugal, é <strong>absolutamente obrigatório</strong> para qualquer operação bancária — abrir conta, pedir empréstimo, receber salário ou pagar impostos. É o equivalente ao Tax ID noutros países. Cidadãos estrangeiros podem obter o NIF nas Finanças ou nas Lojas do Cidadão.</p>
+        </div>
+
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;color:var(--text-dark);">Principais Bancos em Portugal (2026)</h3>
+        <div class="rate-table-wrap">
+          <table class="rate-table">
+            <thead><tr><th>Banco</th><th>Tipo</th><th>Pontos Fortes</th><th>Ideal Para</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Caixa Geral de Depósitos (CGD)</strong></td><td><span class="pill pill-blue">Público</span></td><td>Rede nacional mais extensa, confiança institucional</td><td>Residentes, funcionários públicos</td></tr>
+              <tr><td><strong>Millennium BCP</strong></td><td><span class="pill pill-green">Privado</span></td><td>Banca digital avançada, crédito habitação competitivo</td><td>Profissionais e famílias</td></tr>
+              <tr><td><strong>Santander Totta</strong></td><td><span class="pill pill-green">Privado</span></td><td>Presença internacional, boas taxas hipotecárias</td><td>Estrangeiros e expatriados</td></tr>
+              <tr><td><strong>BPI (BPI/CaixaBank)</strong></td><td><span class="pill pill-green">Privado</span></td><td>Apoio a PMEs, investimento</td><td>Empresários e PMEs</td></tr>
+              <tr><td><strong>Novobanco</strong></td><td><span class="pill pill-green">Privado</span></td><td>Crédito pessoal e habitação flexíveis</td><td>Famílias e compradores</td></tr>
+              <tr><td><strong>ActivoBank</strong></td><td><span class="pill pill-orange">Digital</span></td><td>Zero comissões, 100% digital, MB Way nativo</td><td>Jovens e utilizadores digitais</td></tr>
+              <tr><td><strong>Revolut</strong></td><td><span class="pill pill-orange">Digital</span></td><td>Câmbios sem taxa, integração Multibanco (desde 2025)</td><td>Expatriados e viajantes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 2 — MULTIBANCO & MB WAY
+      ══════════════════════════════ -->
+      <section class="guide-section" id="multibanco">
+        <div class="section-label">Secção 2</div>
+        <h2>Multibanco & MB Way — A Banca Portuguesa no Dia-a-Dia</h2>
+        <p>Portugal tem um dos sistemas de pagamento interbancários mais avançados do mundo. Gerido pela <strong>SIBS</strong> (Sociedade Interbancária de Serviços), o Multibanco vai muito além de um simples ATM.</p>
+        <div class="divider"></div>
+
+        <div class="payment-cards">
+          <div class="payment-card">
+            <div class="payment-card-header">
+              <div class="payment-logo logo-mb">MB</div>
+              <div><h3>Multibanco (ATM)</h3><p>Rede nacional de caixas automáticas</p></div>
+            </div>
+            <div class="payment-card-body">
+              <div class="payment-feature">Levantamento de dinheiro</div>
+              <div class="payment-feature">Depósitos em numerário e cheques</div>
+              <div class="payment-feature">Transferências bancárias nacionais</div>
+              <div class="payment-feature">Pagamento de faturas e impostos</div>
+              <div class="payment-feature">Carregamento de telemóvel e passe</div>
+              <div class="payment-feature">Compra de bilhetes (espetáculos, transportes)</div>
+              <div class="payment-feature">Pagamento de Segurança Social e IRS</div>
+              <div class="payment-feature">Consulta de saldo e movimentos</div>
+              <div class="payment-limit">
+                <span class="pl-label">Limite por levantamento</span>
+                <span class="pl-value">€200</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">Limite diário</span>
+                <span class="pl-value">€400</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">ATMs em Portugal</span>
+                <span class="pl-value">~11.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-card-header">
+              <div class="payment-logo logo-mbway">MB<br>WAY</div>
+              <div><h3>MB Way</h3><p>Carteira digital móvel portuguesa</p></div>
+            </div>
+            <div class="payment-card-body">
+              <div class="payment-feature">Transferências instantâneas por número de telemóvel</div>
+              <div class="payment-feature">Pagamentos QR Code em lojas</div>
+              <div class="payment-feature">Levantamentos sem cartão no ATM (código gerado na app)</div>
+              <div class="payment-feature">Cartões virtuais MB NET para compras online seguras</div>
+              <div class="payment-feature">Pedidos de dinheiro entre amigos</div>
+              <div class="payment-feature">Pagamentos contactless</div>
+              <div class="payment-feature">Pagamentos e-commerce (45% das transações online)</div>
+              <div class="payment-feature">Integração com Skrill e Neteller</div>
+              <div class="payment-limit">
+                <span class="pl-label">Limite por transferência</span>
+                <span class="pl-value">€2.000</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">Limite mensal</span>
+                <span class="pl-value">€5.000</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">Custo para particulares</span>
+                <span class="pl-value">Gratuito</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-card">
+            <div class="payment-card-header">
+              <div class="payment-logo logo-sepa">SEPA</div>
+              <div><h3>Transferências SEPA</h3><p>Pagamentos europeus unificados</p></div>
+            </div>
+            <div class="payment-card-body">
+              <div class="payment-feature">Transferências instantâneas dentro da zona Euro</div>
+              <div class="payment-feature">Débitos diretos automáticos (rendas, seguros)</div>
+              <div class="payment-feature">Aceite por proprietários e serviços portugueses</div>
+              <div class="payment-feature">Sem taxas entre contas da UE via banca padrão</div>
+              <div class="payment-feature">Identificação por IBAN + BIC</div>
+              <div class="payment-limit">
+                <span class="pl-label">Prazo padrão</span>
+                <span class="pl-value">1 dia útil</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">Transferência instantânea</span>
+                <span class="pl-value">< 10 segundos</span>
+              </div>
+              <div class="payment-limit">
+                <span class="pl-label">Cobertura</span>
+                <span class="pl-value">36 países</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box success">
+          <h4>✅ Dica: Levantamento sem cartão com MB Way</h4>
+          <p>Se esqueceu o cartão em casa, pode gerar um código na app MB Way, dirigir-se a qualquer ATM Multibanco, selecionar "Levantamento sem cartão" e introduzir o código. O dinheiro sai diretamente da sua conta, sem necessidade de cartão físico.</p>
+        </div>
+
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:16px;color:var(--text-dark);">Outros Métodos de Pagamento Populares em Portugal</h3>
+        <div class="feature-row">
+          <div class="feature-icon fi-blue">💳</div>
+          <div><h4>Cartão de Débito / Crédito</h4><p>Os cartões de débito são o método cashless mais popular em Portugal, superando os de crédito. Aceites em praticamente todos os estabelecimentos. Pagamentos contactless são universais em Lisboa, Porto e cidades médias.</p></div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon fi-green">📱</div>
+          <div><h4>Apple Pay / Google Pay</h4><p>Amplamente aceites nos terminais de pagamento modernos. Compatíveis com a maioria dos bancos portugueses. Funcionam sobre a rede Multibanco/Visa/Mastercard.</p></div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon fi-orange">🏧</div>
+          <div><h4>Referências Multibanco para Pagamento</h4><p>Sistema único português: ao comprar online ou receber uma fatura, recebe uma <strong>Entidade + Referência + Valor</strong>. Introduz estes dados num ATM ou na app bancária e o pagamento é confirmado instantaneamente. Muito usado para compras online, impostos e serviços públicos.</p></div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-icon fi-purple">🌐</div>
+          <div><h4>Homebanking / Banca Online</h4><p>Todos os bancos portugueses oferecem plataformas online robustas para transferências, pagamentos de faturas, consulta de movimentos, pedidos de crédito e gestão de cartões. As apps móveis têm melhorado significativamente nos últimos anos.</p></div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 3 — TIPOS DE CRÉDITO
+      ══════════════════════════════ -->
+      <section class="guide-section" id="tipos-credito">
+        <div class="section-label">Secção 3</div>
+        <h2>Tipos de Crédito em Portugal</h2>
+        <p>O mercado de crédito português divide-se em quatro grandes categorias, cada uma com características, taxas e requisitos distintos.</p>
+        <div class="divider"></div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="icon">👤</div>
+            <h3>Crédito Pessoal</h3>
+            <p>Empréstimo não garantido para fins pessoais — viagens, educação, saúde, despesas imprevistas. A aprovação baseia-se no rendimento e histórico de crédito, sem necessidade de garantia real.</p>
+            <div style="margin-top:12px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Montante típico</div>
+              <div style="font-weight:700;color:var(--primary);">€500 — €75.000</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Prazo</div>
+              <div style="font-weight:700;color:var(--primary);">12 — 84 meses</div>
+            </div>
+            <span class="tag tag-blue">Sem garantia real</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🏠</div>
+            <h3>Crédito Habitação</h3>
+            <p>Financiamento para compra, construção ou obras em imóveis de habitação permanente ou secundária. É o maior segmento do mercado, ligado ao Euribor e regulado com especial rigor.</p>
+            <div style="margin-top:12px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">LTV residentes</div>
+              <div style="font-weight:700;color:var(--primary);">Até 80-90%</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Prazo máximo</div>
+              <div style="font-weight:700;color:var(--primary);">Até 40 anos</div>
+            </div>
+            <span class="tag tag-green">Menor taxa do mercado</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🚗</div>
+            <h3>Crédito Automóvel</h3>
+            <p>Financiamento para aquisição de veículos novos ou usados. Pode ser crédito clássico, ALD (leasing operacional) ou renting. O veículo pode servir como garantia.</p>
+            <div style="margin-top:12px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Montante típico</div>
+              <div style="font-weight:700;color:var(--primary);">€3.000 — €80.000</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Prazo</div>
+              <div style="font-weight:700;color:var(--primary);">24 — 84 meses</div>
+            </div>
+            <span class="tag tag-orange">Garantia: veículo</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🔄</div>
+            <h3>Consolidação de Créditos</h3>
+            <p>Juntar vários empréstimos num único, com prestação mensal menor e prazo mais longo. Reduz pressão mensal mas pode aumentar o custo total. Muito popular em Portugal.</p>
+            <div style="margin-top:12px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Poupança mensal típica</div>
+              <div style="font-weight:700;color:var(--primary);">20 — 60%</div>
+            </div>
+            <div style="margin-top:8px;">
+              <div style="font-size:0.78rem;color:var(--text-light);">Prazo</div>
+              <div style="font-weight:700;color:var(--primary);">Até 120 meses</div>
+            </div>
+            <span class="tag tag-blue">Simplicidade financeira</span>
+          </div>
+        </div>
+
+        <div class="highlight-box warning">
+          <h4>⚠️ Crédito ao Consumo — Regras do Banco de Portugal</h4>
+          <ul>
+            <li>A taxa de esforço máxima é <strong>35% do rendimento líquido mensal</strong> para novos créditos</li>
+            <li>O Banco de Portugal publica trimestralmente um <strong>relatório de supervisão</strong> do mercado de crédito ao consumo</li>
+            <li>Tem sempre direito a <strong>14 dias de arrependimento</strong> após assinar qualquer contrato de crédito pessoal</li>
+            <li>A amortização antecipada de crédito pessoal tem penalização máxima de <strong>0,5%</strong> (taxa variável) ou <strong>1%</strong> (taxa fixa)</li>
+          </ul>
+        </div>
+
+        <h3 style="font-size:1.1rem;font-weight:700;margin:24px 0 16px;color:var(--text-dark);">Crédito para Empresas e PMEs</h3>
+        <p style="font-size:0.88rem;color:var(--text-mid);margin-bottom:16px;">As pequenas e médias empresas (PMEs) representam mais de <strong>80% do portfolio de crédito empresarial</strong> em Portugal. Os bancos oferecem linhas de crédito específicas, muitas vezes com apoio de entidades como o IAPMEI ou o Turismo de Portugal.</p>
+        <div class="two-col">
+          <div class="info-card">
+            <div class="icon">🏢</div>
+            <h3>Crédito PME</h3>
+            <p>Linhas de financiamento para capital circulante, expansão, equipamento e imobiliário comercial. Frequentemente com garantias mútuas (SPGM) para facilitar aprovação.</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">🚀</div>
+            <h3>Startups & Investimento</h3>
+            <p>Financiamento através de capital de risco, Business Angels, Portugal Ventures e fundos europeus (FEDER, Portugal 2030). Taxa de aprovação mais exigente.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 4 — TAXAS 2026
+      ══════════════════════════════ -->
+      <section class="guide-section" id="taxas">
+        <div class="section-label">Secção 4</div>
+        <h2>Taxas de Juro em Portugal — 2026</h2>
+        <p>As taxas variam consoante o tipo de crédito, o perfil do mutuário e as condições de mercado. Aqui estão os valores de referência atualizados para 2026.</p>
+        <div class="divider"></div>
+
+        <div class="compare-grid">
+          <div class="compare-card">
+            <div class="cc-icon">🏠</div>
+            <h3>Habitação — Variável</h3>
+            <div class="cc-rate">3,09%</div>
+            <div class="cc-label">TAN média (Abr. 2026)</div>
+            <div class="cc-note">Euribor 12M (2,747%) + Spread (0,70% — 1,25%)</div>
+          </div>
+          <div class="compare-card">
+            <div class="cc-icon">🔒</div>
+            <h3>Habitação — Fixa</h3>
+            <div class="cc-rate">3,60%</div>
+            <div class="cc-label">TAN primeiros 24 meses</div>
+            <div class="cc-note">Depois passa a variável. TAEG ~4,6% sem produtos associados</div>
+          </div>
+          <div class="compare-card">
+            <div class="cc-icon">👤</div>
+            <h3>Crédito Pessoal</h3>
+            <div class="cc-rate">7,99%</div>
+            <div class="cc-label">TAN mínima típica</div>
+            <div class="cc-note">Pode ir até 14—18% consoante perfil de risco. Sem garantia real.</div>
+          </div>
+          <div class="compare-card">
+            <div class="cc-icon">🚗</div>
+            <h3>Crédito Automóvel</h3>
+            <div class="cc-rate">5,99%</div>
+            <div class="cc-label">TAN média 2026</div>
+            <div class="cc-note">Veículo serve de garantia, daí taxa inferior ao crédito pessoal</div>
+          </div>
+          <div class="compare-card">
+            <div class="cc-icon">💳</div>
+            <h3>Cartão de Crédito</h3>
+            <div class="cc-rate">13,6—15,7%</div>
+            <div class="cc-label">TAEG típica (Millennium)</div>
+            <div class="cc-note">Limite €1.500 padrão. Juros só sobre o montante em dívida.</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:16px;color:var(--text-dark);">Termos Importantes — Glossário</h3>
+        <div class="rate-table-wrap">
+          <table class="rate-table">
+            <thead><tr><th>Sigla</th><th>Nome Completo</th><th>O que representa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>TAN</strong></td><td>Taxa Anual Nominal</td><td>A taxa de juro base, sem encargos adicionais. Serve para calcular os juros mensais.</td></tr>
+              <tr><td><strong>TAEG</strong></td><td>Taxa Anual Efetiva Global</td><td>O custo total real do crédito: inclui TAN + comissões + seguros obrigatórios + outros encargos. É a métrica mais importante para comparar propostas.</td></tr>
+              <tr><td><strong>MTIC</strong></td><td>Montante Total Imputado ao Consumidor</td><td>O valor total que vai pagar ao banco no final do contrato (capital + todos os juros + custos).</td></tr>
+              <tr><td><strong>Euribor</strong></td><td>Euro Interbank Offered Rate</td><td>Taxa de referência interbancária europeia. Os empréstimos variáveis são indexados ao Euribor a 3, 6 ou 12 meses. Em Abril 2026: 12M = 2,747%.</td></tr>
+              <tr><td><strong>Spread</strong></td><td>Margem bancária</td><td>Margem adicional que o banco cobra acima do Euribor. TAN = Euribor + Spread. Spreads mais baixos significam melhores condições.</td></tr>
+              <tr><td><strong>LTV</strong></td><td>Loan-to-Value</td><td>Rácio entre o empréstimo e o valor do imóvel. LTV 80% = o banco financia 80%, você paga 20% de entrada.</td></tr>
+              <tr><td><strong>Taxa de Esforço</strong></td><td>Debt Service Ratio (DSR)</td><td>Percentagem do rendimento mensal líquido comprometida com prestações de crédito. Máximo legal: 35% para novos créditos.</td></tr>
+              <tr><td><strong>Amortização</strong></td><td>Reembolso de capital</td><td>Parte da prestação mensal que reduz o capital em dívida (vs. juros). Pode ser amortização antecipada total ou parcial.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;margin:24px 0 16px;color:var(--text-dark);">Exemplo Prático — Crédito Habitação €200.000</h3>
+        <div class="highlight-box info">
+          <h4>📊 Simulação: €200.000 · 30 anos · Variável</h4>
+          <div style="margin-top:12px;">
+            <div class="progress-row">
+              <div class="pr-header"><span class="pr-label">TAN 2% — Prestação</span><span class="pr-val">€739/mês</span></div>
+              <div class="prog-bar"><div class="prog-fill" style="width:55%"></div></div>
+            </div>
+            <div class="progress-row">
+              <div class="pr-header"><span class="pr-label">TAN 3,09% — Prestação</span><span class="pr-val">€855/mês</span></div>
+              <div class="prog-bar"><div class="prog-fill" style="width:68%"></div></div>
+            </div>
+            <div class="progress-row">
+              <div class="pr-header"><span class="pr-label">TAN 3,5% — Prestação</span><span class="pr-val">€898/mês</span></div>
+              <div class="prog-bar"><div class="prog-fill" style="width:75%"></div></div>
+            </div>
+            <div class="progress-row">
+              <div class="pr-header"><span class="pr-label">TAN 4,6% (pico 2024) — Prestação</span><span class="pr-val">€1.018/mês</span></div>
+              <div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div>
+            </div>
+          </div>
+          <p style="margin-top:12px;">A diferença entre TAN 2% e TAN 3,5% ao longo de 30 anos representa <strong>€57.186 a mais</strong> no total pago.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 5 — COMO FUNCIONA
+      ══════════════════════════════ -->
+      <section class="guide-section" id="como-funciona">
+        <div class="section-label">Secção 5</div>
+        <h2>Como Funciona o Processo de Crédito</h2>
+        <p>Do pedido inicial à transferência do dinheiro, o processo segue etapas bem definidas. Conhecê-las ajuda a estar preparado e a acelerar a aprovação.</p>
+        <div class="divider"></div>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Dia 1</div>
+            <h4>Pedido / Simulação</h4>
+            <p>Apresentação do pedido online ou em balcão. O banco analisa o montante, prazo e tipo de crédito pretendido. Fase sem compromisso para o cliente.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-time">Dias 1 — 3</div>
+            <h4>Consulta ao Registo Central de Crédito</h4>
+            <p>O banco consulta obrigatoriamente o RCC (Banco de Portugal) para verificar responsabilidades de crédito atuais e historial de pagamentos. Também faz avaliação interna de risco.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot orange"></div>
+            <div class="tl-time">Dias 2 — 5</div>
+            <h4>Análise de Documentos</h4>
+            <p>Verificação de NIF, identificação, recibos de vencimento, declaração de IRS e extratos bancários. Para crédito habitação, inclui avaliação do imóvel por perito credenciado.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot orange"></div>
+            <div class="tl-time">Dias 5 — 15</div>
+            <h4>Decisão de Crédito</h4>
+            <p>O banco emite a Ficha de Informação Normalizada (FIN) com todas as condições. Para habitação, é a Ficha de Informação Normalizada Europeia (FINE). Válida 30 dias.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot green"></div>
+            <div class="tl-time">Dias 15 — 30</div>
+            <h4>Assinatura e Formalização</h4>
+            <p>Assinatura do contrato. Para crédito habitação: escritura pública em notário, seguro de vida e multirriscos obrigatórios, registo do imóvel e hipoteca. Transferência dos fundos.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot green"></div>
+            <div class="tl-time">Mês seguinte</div>
+            <h4>1ª Prestação</h4>
+            <p>A partir do mês seguinte ao desembolso, inicia-se o calendário de amortização. Pode optar por débito direto (recomendado — muitos bancos oferecem desconto no spread).</p>
+          </div>
+        </div>
+
+        <div class="highlight-box warning">
+          <h4>⚠️ Período de Reflexão Obrigatório</h4>
+          <p>Para crédito à habitação, a lei obriga a um período mínimo de <strong>7 dias úteis</strong> entre a receção da FINE e a assinatura do contrato. Para crédito pessoal e ao consumo, tem <strong>14 dias corridos de arrependimento</strong> após a assinatura, sem qualquer penalização.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 6 — DOCUMENTOS
+      ══════════════════════════════ -->
+      <section class="guide-section" id="documentos">
+        <div class="section-label">Secção 6</div>
+        <h2>Documentos Necessários</h2>
+        <p>A preparação prévia da documentação é o fator que mais agiliza o processo de aprovação. Cada tipo de crédito tem requisitos específicos.</p>
+        <div class="divider"></div>
+
+        <div class="two-col">
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:14px;color:var(--text-dark);">📋 Crédito Pessoal & Automóvel</h3>
+            <ul class="doc-list">
+              <li><div class="check">✓</div><div><strong>Cartão de Cidadão / Passaporte</strong> — Documento de identificação válido</div></li>
+              <li><div class="check">✓</div><div><strong>NIF</strong> — Número de Identificação Fiscal obrigatório</div></li>
+              <li><div class="check">✓</div><div><strong>3 últimos recibos de vencimento</strong> — ou declaração de rendimentos se ENI</div></li>
+              <li><div class="check">✓</div><div><strong>Última declaração de IRS</strong> — com nota de liquidação</div></li>
+              <li><div class="check">✓</div><div><strong>3 últimos extratos bancários</strong> — conta principal de ordenado</div></li>
+              <li><div class="check">✓</div><div><strong>Comprovativo de morada</strong> — fatura de serviço (água, luz, gás) recente</div></li>
+              <li><div class="check">✓</div><div><strong>IBAN</strong> — para transferência e débito direto</div></li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:14px;color:var(--text-dark);">🏠 Crédito Habitação (Adicional)</h3>
+            <ul class="doc-list">
+              <li><div class="check">✓</div><div><strong>Caderneta Predial</strong> — registo do imóvel nas Finanças</div></li>
+              <li><div class="check">✓</div><div><strong>Certidão de Teor</strong> — registo predial actualizado (Conservatória)</div></li>
+              <li><div class="check">✓</div><div><strong>Licença de Habitabilidade</strong> — emitida pela Câmara Municipal</div></li>
+              <li><div class="check">✓</div><div><strong>Contrato Promessa Compra e Venda</strong> — CPCV assinado com o vendedor</div></li>
+              <li><div class="check">✓</div><div><strong>Avaliação do Imóvel</strong> — feita por perito credenciado pelo banco</div></li>
+              <li><div class="check">✓</div><div><strong>Seguro de Vida</strong> — obrigatório para crédito habitação</div></li>
+              <li><div class="check">✓</div><div><strong>Seguro Multirriscos Habitação</strong> — protecção do imóvel</div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box info">
+          <h4>💡 Para Trabalhadores por Conta Própria (Recibos Verdes)</h4>
+          <ul>
+            <li>Declaração de início de atividade nas Finanças</li>
+            <li>Últimas 6 declarações trimestrais de IVA</li>
+            <li>Últimas 2 declarações anuais de IRS completas</li>
+            <li>Extratos bancários dos últimos 6-12 meses (prova de rendimento regular)</li>
+            <li>Os bancos geralmente pedem rendimento comprovado há pelo menos 2 anos</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 7 — REGISTO DE CRÉDITO
+      ══════════════════════════════ -->
+      <section class="guide-section" id="registo-credito">
+        <div class="section-label">Secção 7</div>
+        <h2>Registo Central de Crédito (RCC)</h2>
+        <p>Portugal não tem um sistema de "credit score" como os EUA. Em vez disso, o <strong>Banco de Portugal</strong> gere o Registo Central de Crédito (RCC) — uma base de dados com o historial completo de crédito de cada pessoa.</p>
+        <div class="divider"></div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="icon">📊</div>
+            <h3>O que o RCC regista</h3>
+            <p>Todos os contratos de crédito superiores a €50, incluindo crédito pessoal, habitação, cartões de crédito, descobertos autorizados e garantias. Cada banco reporta mensalmente.</p>
+            <span class="tag tag-blue">Actualizado mensalmente</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">🔍</div>
+            <h3>Quem pode consultar</h3>
+            <p>Qualquer banco ou financeira registada pode consultar o seu RCC quando recebe um pedido de crédito. <strong>Você próprio</strong> pode consultar gratuitamente em qualquer altura no site do Banco de Portugal.</p>
+            <span class="tag tag-green">Acesso Gratuito</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">⚠️</div>
+            <h3>Incumprimento no RCC</h3>
+            <p>Atrasos, insolvências e execuções ficam registados. As entidades credoras têm obrigação de reportar e corrigir quando a situação se normaliza. Erros devem ser reportados à instituição que os registou.</p>
+            <span class="tag tag-red">Impacta aprovações</span>
+          </div>
+          <div class="info-card">
+            <div class="icon">✅</div>
+            <h3>Como melhorar o perfil</h3>
+            <p>Pague pontualmente, reduza a taxa de esforço, evite pedir vários créditos ao mesmo tempo, regularize dívidas em atraso e comece com um cartão de crédito de baixo limite para construir historial.</p>
+            <span class="tag tag-green">Dicas práticas</span>
+          </div>
+        </div>
+
+        <div class="highlight-box success">
+          <h4>✅ Como consultar o seu RCC gratuitamente</h4>
+          <p>Aceda a <strong>www.bportugal.pt</strong> → Cidadão → Central de Responsabilidades de Crédito → Consulta pessoal. Precisa de autenticação com Cartão de Cidadão ou Chave Móvel Digital. O relatório mostra todos os seus créditos ativos e histórico de pagamentos.</p>
+        </div>
+
+        <div class="highlight-box info">
+          <h4>📋 Novo regime RCC — Decreto-Lei 103/2025 (em vigor desde Fev. 2026)</h4>
+          <p>A Instrução do Banco de Portugal n.º 1/2026, em vigor desde 25 de Fevereiro de 2026, introduz novas regras de reporte obrigatório, alargando os tipos de crédito abrangidos e estabelecendo maior rastreabilidade de créditos cedidos a terceiros. Todas as instituições de crédito devem adaptar os seus sistemas de reporte ao novo framework.</p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 8 — ESTRANGEIROS
+      ══════════════════════════════ -->
+      <section class="guide-section" id="residentes-estrangeiros">
+        <div class="section-label">Secção 8</div>
+        <h2>Crédito para Residentes e Estrangeiros</h2>
+        <p>Portugal é dos poucos países europeus que permite ativamente que não-residentes acedam ao sistema de crédito. As condições variam consoante o estatuto de residência.</p>
+        <div class="divider"></div>
+
+        <div class="rate-table-wrap">
+          <table class="rate-table">
+            <thead><tr><th>Perfil</th><th>LTV Máximo (Habitação)</th><th>Condições Gerais</th><th>Documentação Extra</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>🇵🇹 Cidadão Português</strong></td>
+                <td><span class="pill pill-green">Até 90%</span></td>
+                <td>Acesso total. Melhores taxas e prazos. Jovens &lt;35 anos podem ter 100% com programas governamentais.</td>
+                <td>Cartão Cidadão, NIF, documentos financeiros padrão</td>
+              </tr>
+              <tr>
+                <td><strong>🇪🇺 Residente UE</strong></td>
+                <td><span class="pill pill-green">Até 80%</span></td>
+                <td>Bom acesso ao crédito. Equiparado ao cidadão português em muitos bancos.</td>
+                <td>Documento identidade UE, NIF, NISS se aplicável, residência em Portugal</td>
+              </tr>
+              <tr>
+                <td><strong>🌍 Residente Não-UE</strong></td>
+                <td><span class="pill pill-orange">65 — 75%</span></td>
+                <td>Acesso possível mas com condições mais exigentes. Requer autorização de residência válida e rendimento documentado.</td>
+                <td>Autorização de Residência (AR), NIF, visto válido, rendimento comprovado em Portugal</td>
+              </tr>
+              <tr>
+                <td><strong>✈️ Não-Residente / Investidor</strong></td>
+                <td><span class="pill pill-orange">60 — 70%</span></td>
+                <td>LTV mais baixo, possível spread mais alto. Alguns bancos especializados (Santander, BPI) têm departamentos dedicados.</td>
+                <td>Passaporte, NIF (obtido presencialmente), prova de rendimento no país de origem, traduções certificadas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight-box info">
+          <h4>🌍 Como obter o NIF sendo estrangeiro</h4>
+          <ul>
+            <li>Presencialmente: Loja do Cidadão, Finanças ou Consulado Português no estrangeiro</li>
+            <li>Se não residente: necessita de nomear um representante fiscal residente em Portugal</li>
+            <li>Custo: gratuito para cidadãos UE; taxas administrativas para não-UE</li>
+            <li>Prazo: imediato presencialmente; 3-5 dias por correio</li>
+            <li>Necessário para: abrir conta bancária, assinar contratos, comprar imóvel, receber rendimentos</li>
+          </ul>
+        </div>
+
+        <div class="two-col">
+          <div class="info-card">
+            <div class="icon">💶</div>
+            <h3>Porquê Portugal atrai investidores?</h3>
+            <p>Taxas hipotecárias 2-3 pontos percentuais abaixo dos EUA e UK. Mercado imobiliário ainda acessível vs. outras capitais europeias. Acesso ao sistema financeiro da zona Euro.</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">📑</div>
+            <h3>Contas para Não-Residentes</h3>
+            <p>Vários bancos permitem abertura de conta sem residência. BCP, Santander Totta e BPI têm departamentos internacionais. Identidade + NIF + prova de rendimento geralmente suficientes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 9 — DICAS
+      ══════════════════════════════ -->
+      <section class="guide-section" id="dicas">
+        <div class="section-label">Secção 9</div>
+        <h2>Dicas Práticas Para Obter Melhores Condições</h2>
+        <p>Pequenas decisões antes de pedir crédito podem poupar milhares de euros ao longo do contrato. Estas são as mais impactantes.</p>
+        <div class="divider"></div>
+
+        <ol class="step-list">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Compare sempre a TAEG, não só a TAN</h4>
+              <p>Dois bancos podem ter a mesma TAN mas TAEGs muito diferentes. A TAEG inclui seguros obrigatórios, comissões de abertura e de gestão. É o único número que permite comparar ofertas de forma justa. Exija sempre a FINE (Ficha de Informação Normalizada Europeia).</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Negocie o spread — é sempre negociável</h4>
+              <p>O Euribor é fixo para todos, mas o spread é definido pelo banco com base no seu perfil. Apresente propostas de outros bancos, domine a conversa sobre o seu historial de crédito limpo e rendimento estável. Spreads de 0,70% vs. 1,25% representam €57.000 num crédito de €200.000 a 30 anos.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Use os produtos associados com cautela</h4>
+              <p>Os bancos oferecem spreads mais baixos se domiciliar o ordenado, contratar seguros e usar cartão de crédito do banco. Calcule sempre o custo total desses produtos vs. a poupança no spread antes de aceitar.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Reduza a taxa de esforço antes de pedir</h4>
+              <p>Se a sua taxa de esforço atual está acima de 25%, pague algumas dívidas pequenas antes de pedir o crédito principal. Cada €100/mês de prestações que elimina melhora significativamente o seu perfil de risco.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>Evite pedir crédito em vários bancos ao mesmo tempo</h4>
+              <p>Cada consulta ao RCC fica registada. Muitos pedidos simultâneos sinalizam dificuldade financeira. Faça simulações sem compromisso primeiro, depois escolha 2-3 bancos para pedir formalmente.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">6</div>
+            <div class="step-body">
+              <h4>Ative o débito direto para as prestações</h4>
+              <p>Muitos bancos oferecem desconto no spread (normalmente 0,10%) se domiciliar o pagamento da prestação por débito direto. Além disso, elimina o risco de esquecer pagamentos e gerar incumprimentos no RCC.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">7</div>
+            <div class="step-body">
+              <h4>Considere a amortização antecipada</h4>
+              <p>Se receber uma herança ou bónus, uma amortização parcial antecipada (máx. 0,5% de penalização em taxa variável) pode reduzir significativamente o prazo ou a prestação mensal. Peça sempre a simulação atualizada ao banco.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ══════════════════════════════
+           SECTION 10 — FAQ
+      ══════════════════════════════ -->
+      <section class="guide-section" id="faq">
+        <div class="section-label">Secção 10</div>
+        <h2>Perguntas Frequentes</h2>
+        <p>As dúvidas mais comuns sobre crédito e banca em Portugal, respondidas de forma clara e direta.</p>
+        <div class="divider"></div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Qual a taxa de esforço máxima aceite pelos bancos portugueses? <span class="arrow">▾</span></div>
+          <div class="faq-a">Em Portugal, o Banco de Portugal estabelece que a taxa de esforço (DSR) máxima para novos créditos é de <strong>35% do rendimento líquido mensal</strong> do agregado familiar. Isto significa que a soma de todas as prestações de crédito não pode exceder 35% do que recebe a limpo todos os meses. Em casos excecionais (como jovens compradores de primeira habitação), pode ir até 40%.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">O que acontece se deixar de pagar uma prestação? <span class="arrow">▾</span></div>
+          <div class="faq-a">Se não pagar uma prestação, o banco contacta-o para regularizar. Após 30 dias em atraso, o incumprimento é reportado ao RCC do Banco de Portugal. Com 90 dias em incumprimento, o banco pode iniciar processo de recuperação de crédito. Para crédito habitação, após 6 meses em atraso, o banco pode iniciar execução hipotecária. O PARI (Plano de Ação para o Risco de Incumprimento) e o PERSI são mecanismos legais de proteção que obrigam o banco a negociar antes de avançar para cobrança judicial.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Posso pedir crédito habitação em Portugal sendo emigrante? <span class="arrow">▾</span></div>
+          <div class="faq-a">Sim. Emigrantes portugueses podem pedir crédito habitação em Portugal mesmo vivendo no estrangeiro. Necessitam de NIF, documentos de rendimento do país onde trabalham (traduzidos e apostilados), extratos bancários e, frequentemente, um representante fiscal em Portugal. O LTV geralmente é limitado a 65-70% para não-residentes. Alguns bancos como o Millennium BCP e o BPI têm departamentos especializados para emigrantes.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Qual a diferença entre taxa fixa e variável? Qual escolher? <span class="arrow">▾</span></div>
+          <div class="faq-a">A <strong>taxa variável</strong> (indexada ao Euribor) começa normalmente mais baixa mas pode subir ou descer com o mercado. A <strong>taxa fixa</strong> mantém a prestação estável durante todo o período acordado, mas costuma ser mais alta no início. Em 2026, com o Euribor em queda (12M: 2,747%), muitos especialistas preferem taxa variável ou mista (fixa nos primeiros 2-5 anos, depois variável). A decisão depende da sua tolerância ao risco e estabilidade financeira.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Quanto tempo demora a aprovação de um crédito pessoal? <span class="arrow">▾</span></div>
+          <div class="faq-a">Para crédito pessoal online (como na Creditxa), a decisão pode ser dada em <strong>24 a 48 horas</strong> com documentação completa. Em balcão bancário tradicional, o processo demora normalmente 3 a 7 dias úteis. Para crédito habitação, o processo completo (avaliação do imóvel + análise + escritura) demora entre 3 a 8 semanas.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">O Multibanco aceita cartões estrangeiros? <span class="arrow">▾</span></div>
+          <div class="faq-a">Sim. A rede Multibanco aceita todos os cartões Visa, Mastercard e outros cartões internacionais. O limite de levantamento é €200 por transação e €400 por dia. Cartões de bancos não-portugueses podem ter taxas de câmbio/transação de 2-3%, exceto se o seu banco faz parte de redes como a Global ATM Alliance (ex: Barclays, Deutsche Bank). Uma dica: se for perguntado se quer pagar em euros ou na moeda do seu cartão, escolha sempre <strong>euros</strong> para evitar taxas de conversão dinâmica (DCC).</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Posso ter mais de um crédito em simultâneo? <span class="arrow">▾</span></div>
+          <div class="faq-a">Sim, não existe limite legal ao número de créditos que pode ter. O que limita é a sua <strong>taxa de esforço total</strong> — a soma de todas as prestações não pode exceder 35% do rendimento líquido. Um banco que receba um pedido de novo crédito vai somar as suas prestações atuais (visíveis no RCC) ao novo encargo para avaliar se respeita este limite.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">O que é a DECO e como pode ajudar? <span class="arrow">▾</span></div>
+          <div class="faq-a">A DECO (Associação Portuguesa para a Defesa do Consumidor) é uma associação independente que defende os direitos dos consumidores, incluindo em questões bancárias e de crédito. Pode ajudar a comparar propostas de crédito, negociar com bancos em caso de litígio, analisar contratos e reclamar junto das entidades reguladoras. O site deco.proteste.pt tem simuladores e orientações gratuitas.</div>
+        </div>
+      </section>
+
+      <!-- ── CTA BANNER ── -->
+      <div class="cta-banner">
+        <div>
+          <h3>Pronto para pedir o seu crédito?</h3>
+          <p>Simulação gratuita, sem compromisso, resposta em 24 horas. 100% online.</p>
+        </div>
+        <a href="../index.html#simulacao" class="btn-cta">Simular Agora →</a>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer style="background:var(--text-dark);color:rgba(255,255,255,0.6);padding:28px 0;margin-top:0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <a href="../index.html" class="logo" style="color:white;font-size:1.2rem;margin-bottom:6px;">
+        <img src="../assets/images/creditxa-logo.png" alt="Creditxa" class="logo__img" style="height:24px;" />
+      </a>
+      <p style="font-size:0.8rem;margin-top:6px;">© 2026 Creditxa S.A. — Supervisionada pelo Banco de Portugal</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:0.82rem;flex-wrap:wrap;">
+      <a href="guia-credito-portugal.html" style="color:var(--accent);font-weight:600;">Guia de Crédito</a>
+      <a href="privacidade.html" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacidade</a>
+      <a href="termos.html" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Termos</a>
+      <a href="../index.html#contacto" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── FAQ toggle ── */
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(f => f.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── TOC active highlight on scroll ── */
+  const tocLinks = document.querySelectorAll('.toc a.toc-link');
+  const sections = document.querySelectorAll('.guide-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const id = e.target.id;
+        const active = document.querySelector(`.toc a[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  /* ── Smooth scroll for TOC ── */
+  document.querySelectorAll('.toc a').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href)?.scrollIntoView({ behavior:'smooth' });
+      }
+    });
+  });
+</script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const _sb_url  = 'https://yatxtgfvwevvehnfoiql.supabase.co';
+  const _sb_key  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhdHh0Z2Z2d2V2dmVobmZvaXFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwNDQ4NTEsImV4cCI6MjA5NTYyMDg1MX0.A_cKC5fbBIUK9Ne8fAhQa2tf4B--19STcZZqzvFfFrk';
+  if (!window._supabase) window._supabase = window.supabase.createClient(_sb_url, _sb_key);
+</script>
+</body>
+</html>

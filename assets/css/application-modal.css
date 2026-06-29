@@ -1,0 +1,134 @@
+/* ============================================================
+   CREDITXA — Loan Application Modal
+   Multi-step form collecting full KYC data per Banco de Portugal
+   lending requirements (identity, residency, income, IBAN, etc.)
+   ============================================================ */
+
+.app-modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 900;
+  background: rgba(0, 24, 54, 0.65);
+  backdrop-filter: blur(3px);
+  align-items: center; justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+.app-modal-overlay.open { display: flex; }
+
+.app-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 620px;
+  max-height: 92vh;
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  animation: appModalIn 0.3s ease;
+}
+@keyframes appModalIn { from { opacity:0; transform: translateY(20px) scale(0.98); } to { opacity:1; transform: translateY(0) scale(1); } }
+
+.app-modal__header {
+  padding: 24px 28px 0;
+  flex-shrink: 0;
+}
+.app-modal__top {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px;
+}
+.app-modal__title { font-size: 1.15rem; font-weight: 800; color: var(--text-dark); letter-spacing: -0.01em; }
+.app-modal__close {
+  width: 32px; height: 32px; border-radius: 8px; border: none;
+  background: var(--off-white); color: var(--text-light);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; transition: var(--transition);
+}
+.app-modal__close:hover { background: #FFEBEE; color: #C62828; }
+
+/* Step progress */
+.app-modal__steps { display: flex; gap: 6px; margin-bottom: 20px; }
+.app-modal__step-bar { flex: 1; height: 4px; border-radius: 100px; background: var(--border); transition: background 0.3s; }
+.app-modal__step-bar.done, .app-modal__step-bar.active { background: linear-gradient(90deg, var(--accent), var(--accent-bright)); }
+.app-modal__step-label { font-size: 0.74rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
+.app-modal__step-desc { font-size: 0.82rem; color: var(--text-light); margin-bottom: 14px; }
+
+.app-modal__body {
+  padding: 0 28px 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.app-form-step { display: none; }
+.app-form-step.active { display: block; animation: stepFade 0.25s ease; }
+@keyframes stepFade { from { opacity:0; transform: translateX(8px); } to { opacity:1; transform: translateX(0); } }
+
+.app-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+.app-form-row.single { grid-template-columns: 1fr; }
+@media (max-width: 540px) { .app-form-row { grid-template-columns: 1fr; } }
+
+.app-field { margin-bottom: 16px; }
+.app-field:last-child { margin-bottom: 0; }
+.app-field label {
+  display: block; font-size: 0.78rem; font-weight: 700; color: var(--text-mid);
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;
+}
+.app-field label .req { color: #C62828; }
+.app-field label .opt { color: var(--text-light); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 0.72rem; }
+.app-field input, .app-field select, .app-field textarea {
+  width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--text-dark);
+  background: var(--white); outline: none; transition: var(--transition);
+  font-family: inherit;
+}
+.app-field input:focus, .app-field select:focus, .app-field textarea:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,147,232,0.1);
+}
+.app-field input::placeholder { color: var(--text-light); }
+.app-field .hint { font-size: 0.74rem; color: var(--text-light); margin-top: 5px; }
+.app-field .error-msg { font-size: 0.76rem; color: #C62828; margin-top: 5px; display: none; }
+.app-field.has-error input, .app-field.has-error select { border-color: #C62828; }
+.app-field.has-error .error-msg { display: block; }
+
+/* Radio / pill choices for residence & employment */
+.app-pill-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.app-pill {
+  padding: 9px 16px; border: 1.5px solid var(--border); border-radius: 100px;
+  font-size: 0.84rem; font-weight: 600; color: var(--text-mid); cursor: pointer;
+  transition: var(--transition); background: var(--white); user-select: none;
+}
+.app-pill:hover { border-color: var(--accent); }
+.app-pill.selected { background: var(--primary); border-color: var(--primary); color: white; }
+
+/* Summary review (final step) */
+.app-summary { background: var(--off-white); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 16px; }
+.app-summary__row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+.app-summary__row:last-child { border-bottom: none; }
+.app-summary__label { color: var(--text-light); }
+.app-summary__value { font-weight: 700; color: var(--text-dark); text-align: right; }
+
+.app-consent { display: flex; align-items: flex-start; gap: 10px; font-size: 0.82rem; color: var(--text-mid); margin-bottom: 14px; }
+.app-consent input { margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--accent); }
+.app-consent a { color: var(--accent); font-weight: 600; }
+
+.app-modal__footer {
+  padding: 18px 28px 26px;
+  display: flex; gap: 12px; justify-content: space-between;
+  flex-shrink: 0; border-top: 1px solid var(--border);
+}
+.app-modal__footer .btn { flex: 1; justify-content: center; }
+.app-modal__footer .btn--back { flex: 0 0 auto; padding-left: 20px; padding-right: 20px; }
+
+.app-modal__success { text-align: center; padding: 40px 20px; }
+.app-modal__success-icon {
+  width: 72px; height: 72px; border-radius: 50%; background: #E8F5E9;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+  font-size: 2.2rem;
+}
+.app-modal__success h3 { font-size: 1.3rem; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
+.app-modal__success p { font-size: 0.9rem; color: var(--text-mid); max-width: 380px; margin: 0 auto; line-height: 1.6; }
+.app-modal__success .ref-code { display: inline-block; margin-top: 16px; padding: 8px 18px; background: var(--off-white); border-radius: 100px; font-weight: 700; color: var(--primary); font-family: monospace; font-size: 0.9rem; }
+
+.app-spinner {
+  width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white; border-radius: 50%; display: inline-block;
+  animation: appSpin 0.7s linear infinite; vertical-align: middle; margin-right: 6px;
+}
+@keyframes appSpin { to { transform: rotate(360deg); } }
